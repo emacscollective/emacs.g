@@ -72,6 +72,10 @@
   (global-diff-hl-mode)
   (add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh t))
 
+(use-package dired
+  :defer t
+  :config (setq dired-listing-switches "-alh"))
+
 (use-package eldoc
   :config (global-eldoc-mode))
 
