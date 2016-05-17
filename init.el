@@ -16,6 +16,7 @@
   (setq initial-buffer-choice t)
   (setq initial-scratch-message "")
   (setq load-prefer-newer t)
+  (tool-bar-mode 0)
   (menu-bar-mode 0))
 
 (progn ;    `borg'
