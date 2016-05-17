@@ -112,6 +112,9 @@
 (use-package saveplace
   :config (save-place-mode))
 
+(use-package simple
+  :config (column-number-mode))
+
 (progn ;     startup
   (message "Loading %s...done (%.3fs)" user-init-file
            (float-time (time-subtract (current-time)
