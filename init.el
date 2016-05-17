@@ -119,6 +119,14 @@
 (use-package simple
   :config (column-number-mode))
 
+(use-package tramp
+  :defer t
+  :config
+  (add-to-list 'tramp-default-proxies-alist '(nil "\\`root\\'" "/ssh:%h:"))
+  (add-to-list 'tramp-default-proxies-alist '("localhost" nil nil))
+  (add-to-list 'tramp-default-proxies-alist
+               (list (regexp-quote (system-name)) nil nil)))
+
 (progn ;     startup
   (message "Loading %s...done (%.3fs)" user-init-file
            (float-time (time-subtract (current-time)
