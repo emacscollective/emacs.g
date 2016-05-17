@@ -83,6 +83,9 @@
   :defer t
   :config (temp-buffer-resize-mode))
 
+(progn ;    `isearch'
+  (setq isearch-allow-scroll t))
+
 (use-package magit
   :defer t
   :bind (("C-x g"   . magit-status)
