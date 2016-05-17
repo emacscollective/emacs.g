@@ -21,6 +21,9 @@
 [submodule "finalize"]
 	path = lib/finalize
 	url = git@github.com:skeeto/elisp-finalize.git
+[submodule "git-modes"]
+	path = lib/git-modes
+	url = git@github.com:magit/git-modes.git
 [submodule "magit"]
 	path = lib/magit
 	url = git@github.com:magit/magit.git
