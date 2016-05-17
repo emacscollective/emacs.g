@@ -96,6 +96,9 @@
 (use-package savehist
   :config (savehist-mode))
 
+(use-package saveplace
+  :config (save-place-mode))
+
 (progn ;     startup
   (message "Loading %s...done (%.3fs)" user-init-file
            (float-time (time-subtract (current-time)
