@@ -133,6 +133,9 @@
 (use-package simple
   :config (column-number-mode))
 
+(progn      `text-mode'
+  (add-hook 'test-mode-hook #'indicate-buffer-boundaries-left))
+
 (use-package tramp
   :defer t
   :config
