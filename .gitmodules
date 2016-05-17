@@ -1,0 +1,3 @@
+[submodule "borg"]
+	path = lib/borg
+	url = git@gitlab.com:tarsius/borg.git
