@@ -104,6 +104,10 @@
                           'magit-insert-submodules
                           'magit-insert-unpulled-from-upstream))
 
+(use-package man
+  :defer t
+  :config (setq Man-width 80))
+
 (use-package paren
   :config (show-paren-mode))
 
