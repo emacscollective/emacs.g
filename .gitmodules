@@ -1,3 +1,6 @@
+[submodule "auto-compile"]
+	path = lib/auto-compile
+	url = git@github.com:tarsius/auto-compile.git
 [submodule "borg"]
 	path = lib/borg
 	url = git@gitlab.com:tarsius/borg.git
@@ -22,6 +25,9 @@
 	path = lib/magit
 	url = git@github.com:magit/magit.git
 	info-path = Documentation
+[submodule "packed"]
+	path = lib/packed
+	url = git@github.com:tarsius/packed.git
 [submodule "use-package"]
 	path = lib/use-package
 	url = git@github.com:jwiegley/use-package.git
