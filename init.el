@@ -72,6 +72,9 @@
   (global-diff-hl-mode)
   (add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh t))
 
+(use-package eldoc
+  :config (global-eldoc-mode))
+
 (use-package magit
   :defer t
   :bind (("C-x g"   . magit-status)
