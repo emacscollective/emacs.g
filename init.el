@@ -53,6 +53,9 @@
   (when (file-exists-p custom-file)
     (load custom-file)))
 
+(use-package server
+  :config (or (server-running-p) (server-mode)))
+
 (progn ;     startup
   (message "Loading early birds...done (%.3fs)"
            (float-time (time-subtract (current-time)
