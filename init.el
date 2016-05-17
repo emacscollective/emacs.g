@@ -93,6 +93,9 @@
                           'magit-insert-submodules
                           'magit-insert-unpulled-from-upstream))
 
+(use-package savehist
+  :config (savehist-mode))
+
 (progn ;     startup
   (message "Loading %s...done (%.3fs)" user-init-file
            (float-time (time-subtract (current-time)
