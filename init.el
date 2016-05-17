@@ -39,6 +39,9 @@
 
 ;;; Long tail
 
+(use-package dash
+  :config (dash-enable-font-lock))
+
 (progn ;     startup
   (message "Loading %s...done (%.3fs)" user-init-file
            (float-time (time-subtract (current-time)
