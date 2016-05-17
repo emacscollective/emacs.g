@@ -86,6 +86,11 @@
 (progn ;    `isearch'
   (setq isearch-allow-scroll t))
 
+(use-package lisp-mode
+  :config
+  (add-hook 'emacs-lisp-mode-hook 'outline-minor-mode)
+  (add-hook 'emacs-lisp-mode-hook 'reveal-mode))
+
 (use-package magit
   :defer t
   :bind (("C-x g"   . magit-status)
