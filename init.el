@@ -99,6 +99,9 @@
 (use-package paren
   :config (show-paren-mode))
 
+(use-package prog-mode
+  :config (global-prettify-symbols-mode))
+
 (use-package savehist
   :config (savehist-mode))
 
