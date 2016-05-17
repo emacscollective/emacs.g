@@ -106,6 +106,10 @@
 (use-package prog-mode
   :config (global-prettify-symbols-mode))
 
+(use-package recentf
+  :demand t
+  :config (add-to-list 'recentf-exclude "^/\\(?:ssh\\|su\\|sudo\\)?:"))
+
 (use-package savehist
   :config (savehist-mode))
 
