@@ -96,6 +96,9 @@
                           'magit-insert-submodules
                           'magit-insert-unpulled-from-upstream))
 
+(use-package paren
+  :config (show-paren-mode))
+
 (use-package savehist
   :config (savehist-mode))
 
