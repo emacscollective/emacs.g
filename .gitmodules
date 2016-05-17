@@ -1,10 +1,23 @@
 [submodule "borg"]
 	path = lib/borg
 	url = git@gitlab.com:tarsius/borg.git
+[submodule "closql"]
+	path = lib/closql
+	url = git@gitlab.com:tarsius/closql.git
 [submodule "dash"]
 	path = lib/dash
 	url = git@github.com:magnars/dash.el.git
 	no-makeinfo = dash-template.texi
+[submodule "emacsql"]
+	path = lib/emacsql
+	url = git@github.com:skeeto/emacsql.git
+	no-byte-compile = emacsql-pg.el
+[submodule "epkg"]
+	path = lib/epkg
+	url = git@gitlab.com:tarsius/epkg.git
+[submodule "finalize"]
+	path = lib/finalize
+	url = git@github.com:skeeto/elisp-finalize.git
 [submodule "use-package"]
 	path = lib/use-package
 	url = git@github.com:jwiegley/use-package.git

@@ -26,6 +26,11 @@
   (require  'use-package)
   (setq use-package-verbose t))
 
+(use-package epkg
+  :defer t
+  :init (setq epkg-repository
+              (expand-file-name "var/epkgs/" user-emacs-directory)))
+
 (use-package custom
   :config
   (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
