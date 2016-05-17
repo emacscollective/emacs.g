@@ -15,7 +15,8 @@
   (setq inhibit-startup-echo-area-message "locutus")
   (setq initial-buffer-choice t)
   (setq initial-scratch-message "")
-  (setq load-prefer-newer t))
+  (setq load-prefer-newer t)
+  (menu-bar-mode 0))
 
 (progn ;    `borg'
   (add-to-list 'load-path (expand-file-name "lib/borg" user-emacs-directory))
