@@ -22,7 +22,12 @@
   (require  'borg)
   (borg-initialize))
 
-(progn ;    `custom'
+(progn ;    `use-package'
+  (require  'use-package)
+  (setq use-package-verbose t))
+
+(use-package custom
+  :config
   (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
   (when (file-exists-p custom-file)
     (load custom-file)))

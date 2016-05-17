@@ -1,3 +1,6 @@
 [submodule "borg"]
 	path = lib/borg
 	url = git@gitlab.com:tarsius/borg.git
+[submodule "use-package"]
+	path = lib/use-package
+	url = git@github.com:jwiegley/use-package.git
