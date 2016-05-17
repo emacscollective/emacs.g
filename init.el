@@ -75,6 +75,10 @@
 (use-package eldoc
   :config (global-eldoc-mode))
 
+(use-package help
+  :defer t
+  :config (temp-buffer-resize-mode))
+
 (use-package magit
   :defer t
   :bind (("C-x g"   . magit-status)
