@@ -47,6 +47,27 @@
 (use-package dash
   :config (dash-enable-font-lock))
 
+(use-package magit
+  :defer t
+  :bind (("C-x g"   . magit-status)
+         ("C-x M-g" . magit-dispatch-popup))
+  :config
+  (magit-add-section-hook 'magit-status-sections-hook
+                          'magit-insert-modules-unpulled-from-upstream
+                          'magit-insert-unpulled-from-upstream)
+  (magit-add-section-hook 'magit-status-sections-hook
+                          'magit-insert-modules-unpulled-from-pushremote
+                          'magit-insert-unpulled-from-upstream)
+  (magit-add-section-hook 'magit-status-sections-hook
+                          'magit-insert-modules-unpushed-to-upstream
+                          'magit-insert-unpulled-from-upstream)
+  (magit-add-section-hook 'magit-status-sections-hook
+                          'magit-insert-modules-unpushed-to-pushremote
+                          'magit-insert-unpulled-from-upstream)
+  (magit-add-section-hook 'magit-status-sections-hook
+                          'magit-insert-submodules
+                          'magit-insert-unpulled-from-upstream))
+
 (progn ;     startup
   (message "Loading %s...done (%.3fs)" user-init-file
            (float-time (time-subtract (current-time)
