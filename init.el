@@ -60,6 +60,12 @@
 (use-package dash
   :config (dash-enable-font-lock))
 
+(use-package diff-hl
+  :config
+  (setq diff-hl-draw-borders nil)
+  (global-diff-hl-mode)
+  (add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh t))
+
 (use-package magit
   :defer t
   :bind (("C-x g"   . magit-status)
