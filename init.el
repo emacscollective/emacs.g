@@ -189,7 +189,19 @@
   (setq magit-log-show-margin nil)
   ;;
   ;; Load extensions
+  (require 'magit-rockstar)
   (require 'magit-wip))
+
+(use-package magit-rockstar
+  :defer t
+  :functions (magit-define-popup-action)
+  :config
+  (magit-define-popup-action 'magit-commit-popup
+    ?n "Reshelve" 'magit-reshelve)
+  (magit-define-popup-action 'magit-rebase-popup
+    ?R "Rockstar" 'magit-rockstar)
+  (magit-define-popup-action 'magit-pull-and-fetch-popup
+    ?P "pull request" 'magit-branch-pull-request))
 
 (use-package magit-wip
   :defer t
