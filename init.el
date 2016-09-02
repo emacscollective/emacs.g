@@ -223,6 +223,10 @@
 (use-package simple
   :config (column-number-mode))
 
+(use-package smerge-mode
+  :defer t
+  :config (setq smerge-refine-ignore-whitespace nil))
+
 (progn      `text-mode'
   (add-hook 'test-mode-hook #'indicate-buffer-boundaries-left))
 
