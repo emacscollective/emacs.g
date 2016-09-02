@@ -63,6 +63,10 @@
 
 ;;; Long tail
 
+(use-package autorevert
+  :config
+  (setq auto-revert-verbose nil))
+
 (use-package dash
   :config (dash-enable-font-lock))
 
@@ -78,6 +82,22 @@
 
 (use-package eldoc
   :config (global-eldoc-mode))
+
+(use-package git-commit
+  :defer t
+  :config
+  (setq git-commit-finish-query-functions nil)
+  (setq git-commit-summary-max-length 64)
+  (remove-hook 'git-commit-setup-hook 'git-commit-setup-changelog-support)
+  (remove-hook 'git-commit-setup-hook 'git-commit-propertize-diff)
+  (remove-hook 'git-commit-setup-hook 'with-editor-usage-message)
+  (add-hook 'git-commit-setup-hook 'git-commit-turn-on-flyspell t))
+
+(use-package git-rebase
+  :defer t
+  :config
+  (setq git-rebase-confirm-cancel nil)
+  (setq git-rebase-show-instructions nil))
 
 (use-package help
   :defer t
@@ -96,9 +116,44 @@
 
 (use-package magit
   :defer t
+  :functions (magit-add-section-hook)
   :bind (("C-x g"   . magit-status)
          ("C-x M-g" . magit-dispatch-popup))
   :config
+  ;;
+  ;; Disable safety nets
+  (setq magit-commit-squash-confirm nil)
+  (setq magit-popup-use-prefix-argument 'default)
+  (setq magit-save-repository-buffers 'dontask)
+  (add-to-list 'magit-no-confirm 'safe-with-wip t)
+  (add-to-list 'magit-no-confirm 'rename t)
+  (add-to-list 'magit-no-confirm 'resurrect t)
+  (add-to-list 'magit-no-confirm 'trash t)
+  ;;
+  ;; Disable usage information
+  (setq magit-popup-show-help-echo nil)
+  (setq magit-popup-show-common-commands nil)
+  ;;
+  ;; Window managment
+  (setq magit-display-buffer-function
+        'magit-display-buffer-fullframe-status-topleft-v1)
+  (add-hook 'magit-section-movement-hook 'magit-status-maybe-update-revision-buffer)
+  (add-hook 'magit-section-movement-hook 'magit-status-maybe-update-blob-buffer)
+  (add-hook 'magit-section-movement-hook 'magit-log-maybe-update-blob-buffer)
+  ;;
+  ;; Global settings
+  (add-hook 'after-save-hook 'magit-after-save-refresh-status t)
+  (global-magit-file-mode)
+  ;;
+  ;; Commit settings
+  (setq magit-commit-extend-override-date nil)
+  (setq magit-commit-reword-override-date nil)
+  ;;
+  ;; Push settings
+  (setq magit-push-current-set-remote-if-missing 'default)
+  ;;
+  ;; Status buffer settings
+  (setq magit-status-expand-stashes nil)
   (magit-add-section-hook 'magit-status-sections-hook
                           'magit-insert-modules-unpulled-from-upstream
                           'magit-insert-unpulled-from-upstream)
@@ -113,7 +168,34 @@
                           'magit-insert-unpulled-from-upstream)
   (magit-add-section-hook 'magit-status-sections-hook
                           'magit-insert-submodules
-                          'magit-insert-unpulled-from-upstream))
+                          'magit-insert-unpulled-from-upstream)
+  (magit-add-section-hook 'magit-status-sections-hook
+                          'magit-insert-unpulled-from-upstream-or-recent
+                          'magit-insert-unpulled-from-upstream
+                          'replace)
+  ;;
+  ;; Refs buffer settings
+  (define-key magit-branch-section-map "\r" 'magit-show-commit)
+  (define-key magit-tag-section-map    "\r" 'magit-show-commit)
+  ;;
+  ;; Diff buffer settings
+  (setq magit-diff-refine-hunk 'all)
+  ;;
+  ;; Log buffer settings
+  (setq magit-log-show-margin nil)
+  ;;
+  ;; Load extensions
+  (require 'magit-wip))
+
+(use-package magit-wip
+  :defer t
+  :config
+  (magit-wip-before-change-mode)
+  (magit-wip-after-apply-mode)
+  (magit-wip-after-save-mode)
+  (setq magit-wip-before-change-mode-lighter "")
+  (setq magit-wip-after-apply-mode-lighter "")
+  (setq magit-wip-after-save-local-mode-lighter ""))
 
 (use-package man
   :defer t
