@@ -80,6 +80,10 @@
   :defer t
   :config (setq dired-listing-switches "-alh"))
 
+(use-package ediff
+  :defer t
+  :config (setq ediff-window-setup-function 'ediff-setup-windows-plain))
+
 (use-package eldoc
   :config (global-eldoc-mode))
 
