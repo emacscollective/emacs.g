@@ -238,6 +238,12 @@
 (use-package saveplace
   :config (save-place-mode))
 
+(use-package shell
+  :defer t
+  :config
+  (require 'with-editor)
+  (add-hook 'shell-mode-hook 'with-editor-export-editor))
+
 (use-package simple
   :config (column-number-mode))
 
