@@ -124,6 +124,8 @@
   :bind (("C-x g"   . magit-status)
          ("C-x M-g" . magit-dispatch-popup))
   :config
+  (define-key magit-mode-map "f" 'magit-pull-and-fetch-popup)
+  (define-key magit-mode-map "F" nil)
   ;;
   ;; Disable safety nets
   (setq magit-commit-squash-confirm nil)
