@@ -251,6 +251,12 @@
   :defer t
   :config (setq smerge-refine-ignore-whitespace nil))
 
+(use-package term
+  :defer t
+  :config
+  (require 'with-editor)
+  (add-hook 'term-exec-hook 'with-editor-export-editor))
+
 (progn      `text-mode'
   (add-hook 'test-mode-hook #'indicate-buffer-boundaries-left))
 
