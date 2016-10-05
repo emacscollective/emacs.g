@@ -155,6 +155,10 @@
   (setq magit-commit-extend-override-date nil)
   (setq magit-commit-reword-override-date nil)
   ;;
+  ;; Branch settings
+  (setq magit-branch-adjust-remote-upstream-alist
+        '(("master" "master" "next" "maint")))
+  ;;
   ;; Push settings
   (setq magit-push-current-set-remote-if-missing 'default)
   ;;
