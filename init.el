@@ -90,8 +90,6 @@
 (use-package git-commit
   :defer t
   :config
-  (setq git-commit-finish-query-functions nil)
-  (setq git-commit-summary-max-length 64)
   (remove-hook 'git-commit-setup-hook 'git-commit-setup-changelog-support)
   (remove-hook 'git-commit-setup-hook 'git-commit-propertize-diff)
   (remove-hook 'git-commit-setup-hook 'with-editor-usage-message)
