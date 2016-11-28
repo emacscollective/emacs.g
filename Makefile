@@ -46,6 +46,5 @@ lib/%: .FORCE
 
 bootstrap:
 	git submodule init
-	git submodule update
-	git submodule foreach 'git checkout master; git reset --hard $$sha1'
+	bin/borg-bootstrap
 	make build

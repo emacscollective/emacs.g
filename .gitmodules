@@ -1,3 +1,6 @@
+[borg]
+	pushDefault = locutus
+	collective = emacsg
 [submodule "auto-compile"]
 	path = lib/auto-compile
 	url = git@github.com:tarsius/auto-compile.git
