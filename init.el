@@ -259,8 +259,8 @@
   (require 'with-editor)
   (add-hook 'term-exec-hook 'with-editor-export-editor))
 
-(progn      `text-mode'
-  (add-hook 'test-mode-hook #'indicate-buffer-boundaries-left))
+(progn ;    `text-mode'
+  (add-hook 'text-mode-hook #'indicate-buffer-boundaries-left))
 
 (use-package tramp
   :defer t
