@@ -6,6 +6,10 @@
 .PHONY: all help build build-init quick bootstrap
 .FORCE:
 
+SUPPRESS_WARNINGS  = 2>&1 | grep -v
+SUPPRESS_WARNINGS += -e "‘defgeneric’ is an obsolete macro"
+SUPPRESS_WARNINGS += -e "‘defmethod’ is an obsolete macro"
+
 all: build
 
 help:
@@ -21,24 +25,24 @@ build:
 	@rm -f init.elc
 	@emacs -Q --batch -L lib/borg --load borg \
 	--funcall borg-initialize \
-	--funcall borg-batch-rebuild
+	--funcall borg-batch-rebuild $(SUPPRESS_WARNINGS)
 
 build-init:
 	@rm -f init.elc
 	@emacs -Q --batch -L lib/borg --load borg \
 	--funcall borg-initialize \
-	--funcall borg-batch-rebuild-init
+	--funcall borg-batch-rebuild-init 2>&1
 
 quick:
 	@rm -f init.elc
 	@emacs -Q --batch -L lib/borg --load borg \
 	--funcall borg-initialize \
-	--eval  '(borg-batch-rebuild t)'
+	--eval  '(borg-batch-rebuild t)' $(SUPPRESS_WARNINGS)
 
 lib/%: .FORCE
 	@emacs -Q --batch -L lib/borg --load borg \
 	--funcall borg-initialize \
-	--eval  '(borg-build "$(@F)")'
+	--eval  '(borg-build "$(@F)")' $(SUPPRESS_WARNINGS)
 
 bootstrap:
 	git submodule init
