@@ -127,7 +127,6 @@
   ;;
   ;; Disable safety nets
   (setq magit-commit-squash-confirm nil)
-  (setq magit-popup-use-prefix-argument 'default)
   (setq magit-save-repository-buffers 'dontask)
   (add-to-list 'magit-no-confirm 'safe-with-wip t)
   (add-to-list 'magit-no-confirm 'rename t)
@@ -136,7 +135,6 @@
   ;;
   ;; Disable usage information
   (setq magit-popup-show-help-echo nil)
-  (setq magit-popup-show-common-commands nil)
   ;;
   ;; Window managment
   (setq magit-display-buffer-function
