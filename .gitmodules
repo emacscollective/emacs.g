@@ -6,10 +6,10 @@
 	url = git@github.com:tarsius/auto-compile.git
 [submodule "borg"]
 	path = lib/borg
-	url = git@gitlab.com:emacscollective/borg.git
+	url = git@github.com:emacscollective/borg.git
 [submodule "closql"]
 	path = lib/closql
-	url = git@gitlab.com:emacscollective/closql.git
+	url = git@github.com:emacscollective/closql.git
 [submodule "dash"]
 	path = lib/dash
 	url = git@github.com:magnars/dash.el.git
@@ -23,7 +23,7 @@
 	no-byte-compile = emacsql-pg.el
 [submodule "epkg"]
 	path = lib/epkg
-	url = git@gitlab.com:emacscollective/epkg.git
+	url = git@github.com:emacscollective/epkg.git
 [submodule "finalize"]
 	path = lib/finalize
 	url = git@github.com:skeeto/elisp-finalize.git
