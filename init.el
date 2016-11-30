@@ -188,7 +188,7 @@
   (setq magit-diff-refine-hunk 'all)
   ;;
   ;; Log buffer settings
-  (setq magit-log-show-margin nil)
+  (setf (cadr magit-log-margin) nil)
   ;;
   ;; Load extensions
   (require 'magit-rockstar)
