@@ -40,6 +40,8 @@ hive_remote=$(git config -f .gitmodules borg.collective)
 push_remote=$(git config -f .gitmodules borg.pushDefault)
 
 toplevel=$(git rev-parse --show-toplevel)
+test -n "$toplevel" || exit 2
+cd "$toplevel"
 
 git submodule--helper list |
 while read mode sha1 stage path
@@ -90,11 +92,16 @@ do
         if test -e "$path"/.git
         then
             cd "$path"
-            git reset --hard "$sha1" ||
-            echo >&2 "futile: checkout of '$sha1' into submodule path '$path' failed"
+            if ! git reset --hard "$sha1"
+            then
+                echo >&2 "futile: Checkout of '$sha1' into submodule path '$path' failed"
+                git reset --hard HEAD
+                exit 1
+            fi
             cd "$toplevel"
         else
-            echo >&2 "futile: clone of any remote into submodule path '$path' failed"
+            echo >&2 "futile: Clone of any remote into submodule path '$path' failed"
+            exit 1
         fi
     fi
 done
