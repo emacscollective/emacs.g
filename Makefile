@@ -14,11 +14,11 @@ all: build
 
 help:
 	$(info )
-	$(info make [all|build]    = rebuild all drones and init.el)
-	$(info make quick          = rebuild most drones and init.el)
+	$(info make [all|build]    = rebuild all drones and init files)
+	$(info make quick          = rebuild most drones and init files)
 	$(info make lib/DRONE      = rebuild DRONE)
-	$(info make build-init     = rebuild init.el)
-	$(info make bootstrap      = bootstrap collective)
+	$(info make build-init     = rebuild init files)
+	$(info make bootstrap      = bootstrap collective or new drones)
 	@printf "\n"
 
 build:
@@ -45,6 +45,9 @@ lib/%: .FORCE
 	--eval  '(borg-build "$(@F)")' $(SUPPRESS_WARNINGS)
 
 bootstrap:
-	git submodule init
-	bin/borg-bootstrap
-	make build
+	@printf "\n=== Running 'git submodule init' ===\n\n"
+	@git submodule init
+	@printf "\n=== Running 'bin/borg-bootstrap' ===\n"
+	@bin/borg-bootstrap
+	@printf "\n=== Running 'make build' ===\n\n"
+	@make build
