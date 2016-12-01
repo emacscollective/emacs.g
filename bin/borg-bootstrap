@@ -42,12 +42,16 @@ push_remote=$(git config -f .gitmodules borg.pushDefault)
 git submodule--helper list |
 while read mode sha1 stage path
 do
-    name=$(git submodule--helper name "$path")
-    url=$(git config -f .gitmodules submodule."$name".url)
-
     if test -e "$path" && ! test -e "$path"/.git
     then
-        git submodule--helper clone --name "$name" --path "$path" --url "$url"
+        name=$(git submodule--helper name "$path")
+
+        echo "\n--- [$name] ---\n"
+
+        git submodule--helper clone \
+            --name "$name" \
+            --path "$path" \
+            --url $(git config -f .gitmodules submodule."$name".url)
 
         git config -f .gitmodules --get-all submodule."$name".remote |
         while read remote remote_url

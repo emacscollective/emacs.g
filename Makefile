@@ -45,6 +45,9 @@ lib/%: .FORCE
 	--eval  '(borg-build "$(@F)")' $(SUPPRESS_WARNINGS)
 
 bootstrap:
-	git submodule init
-	bin/borg-bootstrap
-	make build
+	@printf "\n=== Running 'git submodule init' ===\n\n"
+	@git submodule init
+	@printf "\n=== Running 'bin/borg-bootstrap' ===\n"
+	@bin/borg-bootstrap
+	@printf "\n=== Running 'make build' ===\n\n"
+	@make build
