@@ -14,11 +14,11 @@ all: build
 
 help:
 	$(info )
-	$(info make [all|build]    = rebuild all drones and init.el)
-	$(info make quick          = rebuild most drones and init.el)
+	$(info make [all|build]    = rebuild all drones and init files)
+	$(info make quick          = rebuild most drones and init files)
 	$(info make lib/DRONE      = rebuild DRONE)
-	$(info make build-init     = rebuild init.el)
-	$(info make bootstrap      = bootstrap collective)
+	$(info make build-init     = rebuild init files)
+	$(info make bootstrap      = bootstrap collective or new drones)
 	@printf "\n"
 
 build:
