@@ -5,37 +5,6 @@
 # Author: Jonas Bernoulli <jonas@bernoul.li>
 # License: GPL v3 <https://www.gnu.org/licenses/gpl-3.0.txt>
 
-# Commentary:
-
-# This script is a replacement for `git submodule update'.  The
-# main differences are that this script resets the current branch
-# if necessary instead of detaching HEAD and that it is capable of
-# adding and configuring additional remotes.
-
-# The following variables can be set in ".gitmodules":
-#
-# * submodule.DRONE.remote = NAME URL
-#
-#   This variable specifies an additional remote named DRONE that is
-#   fetched from URL.
-#
-# * borg.collective = REMOTE
-#
-#   This variable specifies the name used for remotes that reference
-#   a repository that has been patched by the collective.  If a NAME
-#   matches REMOTE, then it is configured as the upstream of the
-#   current branch of the respective DRONE.
-#
-# * borg.pushDefault = DEFAULT
-#
-#   This variable specifies a name used for push-remotes.  If a NAME
-#   matches DEFAULT, then it is configured as the push-remote of the
-#   current branch of the respective DRONE.
-
-# If an error occurs while `make bootstrap' runs this script, then
-# fix the error(s) and run `bin/borg-bootstrap' directly, followed
-# by `make build'.
-
 hive_remote=$(git config -f .gitmodules borg.collective)
 push_remote=$(git config -f .gitmodules borg.pushDefault)
 
@@ -79,8 +48,14 @@ do
                 cd "$path"
                 if test "$remote" = "$hive_remote"
                 then
-                    git config branch.master.remote "$remote"
-
+                    if test -e "$toplevel/.hive-maint"
+                    then
+                        git config remote.pushDefault "$remote"
+                    else
+                        branch=$(git rev-parse --abbref-ref HEAD)
+                        test -n "$branch" &&
+                            git config branch.master.remote "$remote"
+                    fi
                 elif test "$remote" = "$push_remote"
                 then
                     git config remote.pushDefault "$remote"
