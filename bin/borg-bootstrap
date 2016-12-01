@@ -39,6 +39,8 @@
 hive_remote=$(git config -f .gitmodules borg.collective)
 push_remote=$(git config -f .gitmodules borg.pushDefault)
 
+toplevel=$(git rev-parse --show-toplevel)
+
 git submodule--helper list |
 while read mode sha1 stage path
 do
@@ -64,36 +66,33 @@ do
                     --url "$remote_url" &&
                 git remote rename origin "$remote"
             else
-                (
-                    cd "$path"
-                    git remote add "$remote" "$remote_url"
-                    git fetch "$remote"
-                )
+                cd "$path"
+                git remote add "$remote" "$remote_url"
+                git fetch "$remote"
+                cd "$toplevel"
             fi
 
             if test -e "$path"/.git
             then
-                (
-                    cd "$path"
-                    if test "$remote" = "$hive_remote"
-                    then
-                        git config branch.master.remote "$remote"
+                cd "$path"
+                if test "$remote" = "$hive_remote"
+                then
+                    git config branch.master.remote "$remote"
 
-                    elif test "$remote" = "$push_remote"
-                    then
-                        git config remote.pushDefault "$remote"
-                    fi
-                )
+                elif test "$remote" = "$push_remote"
+                then
+                    git config remote.pushDefault "$remote"
+                fi
+                cd "$toplevel"
             fi
         done
 
         if test -e "$path"/.git
         then
-            (
-                cd "$path"
-                git reset --hard "$sha1" ||
-                echo >&2 "futile: checkout of '$sha1' into submodule path '$path' failed"
-            )
+            cd "$path"
+            git reset --hard "$sha1" ||
+            echo >&2 "futile: checkout of '$sha1' into submodule path '$path' failed"
+            cd "$toplevel"
         else
             echo >&2 "futile: clone of any remote into submodule path '$path' failed"
         fi
