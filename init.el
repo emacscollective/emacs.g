@@ -119,6 +119,13 @@
 (use-package magit
   :defer t
   :functions (magit-add-section-hook)
+  :init
+  ;;
+  ;; Margin settings
+  (setq magit-log-margin '(nil age magit-log-margin-width nil 15))
+  (setq magit-refs-margin-for-tags t)
+  ;;
+  ;; Key bindings
   :bind (("C-x g"   . magit-status)
          ("C-x M-g" . magit-dispatch-popup))
   :config
@@ -182,9 +189,6 @@
   ;;
   ;; Diff buffer settings
   (setq magit-diff-refine-hunk 'all)
-  ;;
-  ;; Log buffer settings
-  (setf (cadr magit-log-margin) nil)
   ;;
   ;; Load extensions
   (require 'magit-rockstar)
