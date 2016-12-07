@@ -180,10 +180,6 @@
                           'magit-insert-unpulled-from-upstream
                           'replace)
   ;;
-  ;; Refs buffer settings
-  (define-key magit-branch-section-map "\r" 'magit-show-commit)
-  (define-key magit-tag-section-map    "\r" 'magit-show-commit)
-  ;;
   ;; Diff buffer settings
   (setq magit-diff-refine-hunk 'all)
   ;;
