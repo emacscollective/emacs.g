@@ -17,6 +17,9 @@
 [submodule "diff-hl"]
 	path = lib/diff-hl
 	url = git@github.com:dgutov/diff-hl.git
+[submodule "dim-autoload"]
+	path = lib/dim-autoload
+	url = git@github.com:tarsius/dim-autoload.git
 [submodule "emacsql"]
 	path = lib/emacsql
 	url = git@github.com:skeeto/emacsql.git

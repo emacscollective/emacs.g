@@ -72,6 +72,9 @@
   (global-diff-hl-mode)
   (add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh t))
 
+(use-package dim-autoload
+  :config (global-dim-autoload-cookies-mode))
+
 (use-package dired
   :defer t
   :config (setq dired-listing-switches "-alh"))
