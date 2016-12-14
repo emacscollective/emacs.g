@@ -132,6 +132,9 @@
   :defer t
   :config (setq Man-width 80))
 
+(use-package mode-line-debug
+  :config (mode-line-debug-mode))
+
 (use-package morlock
   :config (global-morlock-mode))
 
