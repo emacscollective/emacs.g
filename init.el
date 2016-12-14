@@ -47,6 +47,8 @@
   :init (setq epkg-repository
               (expand-file-name "var/epkgs/" user-emacs-directory)))
 
+(use-package no-littering)
+
 (use-package custom
   :config
   (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
@@ -267,6 +269,11 @@
   (add-to-list 'tramp-default-proxies-alist '("localhost" nil nil))
   (add-to-list 'tramp-default-proxies-alist
                (list (regexp-quote (system-name)) nil nil)))
+
+(use-package undo-tree
+  :config
+  (global-undo-tree-mode)
+  (setq undo-tree-mode-lighter ""))
 
 (progn ;     startup
   (message "Loading %s...done (%.3fs)" user-init-file
