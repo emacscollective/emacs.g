@@ -46,6 +46,9 @@
 [submodule "morlock"]
 	path = lib/morlock
 	url = git@github.com:tarsius/morlock.git
+[submodule "orglink"]
+	path = lib/orglink
+	url = git@github.com:tarsius/orglink.git
 [submodule "packed"]
 	path = lib/packed
 	url = git@github.com:tarsius/packed.git
