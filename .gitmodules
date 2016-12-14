@@ -40,6 +40,9 @@
 [submodule "packed"]
 	path = lib/packed
 	url = git@github.com:tarsius/packed.git
+[submodule "rainbow-mode"]
+	path = lib/rainbow-mode
+	url = git@github.com:emacsmirror/rainbow-mode.git
 [submodule "use-package"]
 	path = lib/use-package
 	url = git@github.com:jwiegley/use-package.git
