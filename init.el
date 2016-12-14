@@ -129,6 +129,9 @@
   :defer t
   :config (setq Man-width 80))
 
+(use-package morlock
+  :config (global-morlock-mode))
+
 (use-package paren
   :config (show-paren-mode))
 
