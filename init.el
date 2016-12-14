@@ -47,6 +47,8 @@
   :init (setq epkg-repository
               (expand-file-name "var/epkgs/" user-emacs-directory)))
 
+(use-package no-littering)
+
 (use-package custom
   :config
   (setq custom-file (expand-file-name "custom.el" user-emacs-directory))

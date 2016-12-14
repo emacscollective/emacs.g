@@ -34,6 +34,9 @@
 	path = lib/magit
 	url = git@github.com:magit/magit.git
 	info-path = Documentation
+[submodule "no-littering"]
+	path = lib/no-littering
+	url = git@github.com:tarsius/no-littering.git
 [submodule "packed"]
 	path = lib/packed
 	url = git@github.com:tarsius/packed.git
