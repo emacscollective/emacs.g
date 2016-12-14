@@ -78,6 +78,9 @@
   (global-diff-hl-mode)
   (add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh t))
 
+(use-package dim-autoload
+  :config (global-dim-autoload-cookies-mode))
+
 (use-package dired
   :defer t
   :config (setq dired-listing-switches "-alh"))
@@ -88,6 +91,13 @@
 
 (use-package eldoc
   :config (global-eldoc-mode))
+
+(use-package fill-column-indicator
+  :config
+  (setq fci-rule-width 2)
+  (setq fci-rule-column 80)
+  (add-hook 'emacs-lisp-mode-hook 'fci-mode)
+  (add-hook 'git-commit-setup-hook 'fci-mode))
 
 (use-package git-commit
   :defer t
@@ -106,6 +116,9 @@
 (use-package help
   :defer t
   :config (temp-buffer-resize-mode))
+
+(use-package hl-todo
+  :config (global-hl-todo-mode))
 
 (progn ;    `isearch'
   (setq isearch-allow-scroll t))
@@ -221,8 +234,17 @@
   :defer t
   :config (setq Man-width 80))
 
+(use-package mode-line-debug
+  :config (mode-line-debug-mode))
+
+(use-package morlock
+  :config (global-morlock-mode))
+
 (use-package paren
   :config (show-paren-mode))
+
+(use-package paren-face
+  :config (global-paren-face-mode))
 
 (use-package prog-mode
   :config (global-prettify-symbols-mode)

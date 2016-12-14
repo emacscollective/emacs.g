@@ -17,6 +17,9 @@
 [submodule "diff-hl"]
 	path = lib/diff-hl
 	url = git@github.com:dgutov/diff-hl.git
+[submodule "dim-autoload"]
+	path = lib/dim-autoload
+	url = git@github.com:tarsius/dim-autoload.git
 [submodule "emacsql"]
 	path = lib/emacsql
 	url = git@github.com:skeeto/emacsql.git
@@ -24,12 +27,18 @@
 [submodule "epkg"]
 	path = lib/epkg
 	url = git@github.com:emacscollective/epkg.git
+[submodule "fill-column-indicator"]
+	path = lib/fill-column-indicator
+	url = git@github.com:alpaker/Fill-Column-Indicator.git
 [submodule "finalize"]
 	path = lib/finalize
 	url = git@github.com:skeeto/elisp-finalize.git
 [submodule "git-modes"]
 	path = lib/git-modes
 	url = git@github.com:magit/git-modes.git
+[submodule "hl-todo"]
+	path = lib/hl-todo
+	url = git@github.com:tarsius/hl-todo.git
 [submodule "macrostep"]
 	path = lib/macrostep
 	url = git@github.com:joddie/macrostep.git
@@ -40,15 +49,30 @@
 [submodule "magit-rockstar"]
 	path = lib/magit-rockstar
 	url = git@github.com:tarsius/magit-rockstar.git
+[submodule "mode-line-debug"]
+	path = lib/mode-line-debug
+	url = git@github.com:tarsius/mode-line-debug.git
+[submodule "morlock"]
+	path = lib/morlock
+	url = git@github.com:tarsius/morlock.git
 [submodule "no-littering"]
 	path = lib/no-littering
 	url = git@github.com:tarsius/no-littering.git
 [submodule "orgit"]
 	path = lib/orgit
 	url = git@github.com:magit/orgit.git
+[submodule "orglink"]
+	path = lib/orglink
+	url = git@github.com:tarsius/orglink.git
 [submodule "packed"]
 	path = lib/packed
 	url = git@github.com:tarsius/packed.git
+[submodule "paren-face"]
+	path = lib/paren-face
+	url = git@github.com:tarsius/paren-face.git
+[submodule "rainbow-mode"]
+	path = lib/rainbow-mode
+	url = git@github.com:emacsmirror/rainbow-mode.git
 [submodule "undo-tree"]
 	path = lib/undo-tree
 	url = http://www.dr-qubit.org/git/undo-tree.git
