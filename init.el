@@ -132,6 +132,9 @@
 (use-package paren
   :config (show-paren-mode))
 
+(use-package paren-face
+  :config (global-paren-face-mode))
+
 (use-package prog-mode
   :config (global-prettify-symbols-mode)
   (defun indicate-buffer-boundaries-left ()
