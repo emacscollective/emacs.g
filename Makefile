@@ -1,14 +1,10 @@
-# Copyright (C) 2016  Jonas Bernoulli
+# Copyright (C) 2016-2017  Jonas Bernoulli
 #
 # Author: Jonas Bernoulli <jonas@bernoul.li>
 # License: GPL v3 <https://www.gnu.org/licenses/gpl-3.0.txt>
 
 .PHONY: all help build build-init quick bootstrap
 .FORCE:
-
-SUPPRESS_WARNINGS  = 2>&1 | grep -v
-SUPPRESS_WARNINGS += -e "‘defgeneric’ is an obsolete macro"
-SUPPRESS_WARNINGS += -e "‘defmethod’ is an obsolete macro"
 
 all: build
 
@@ -25,7 +21,7 @@ build:
 	@rm -f init.elc
 	@emacs -Q --batch -L lib/borg --load borg \
 	--funcall borg-initialize \
-	--funcall borg-batch-rebuild $(SUPPRESS_WARNINGS)
+	--funcall borg-batch-rebuild 2>&1
 
 build-init:
 	@rm -f init.elc
@@ -37,12 +33,12 @@ quick:
 	@rm -f init.elc
 	@emacs -Q --batch -L lib/borg --load borg \
 	--funcall borg-initialize \
-	--eval  '(borg-batch-rebuild t)' $(SUPPRESS_WARNINGS)
+	--eval  '(borg-batch-rebuild t)' 2>&1
 
 lib/%: .FORCE
 	@emacs -Q --batch -L lib/borg --load borg \
 	--funcall borg-initialize \
-	--eval  '(borg-build "$(@F)")' $(SUPPRESS_WARNINGS)
+	--eval  '(borg-build "$(@F)")' 2>&1
 
 bootstrap:
 	@printf "\n=== Running 'git submodule init' ===\n\n"
