@@ -202,8 +202,8 @@
     ?n "Reshelve" 'magit-reshelve)
   (magit-define-popup-action 'magit-rebase-popup
     ?R "Rockstar" 'magit-rockstar)
-  (magit-define-popup-action 'magit-pull-and-fetch-popup
-    ?P "pull request" 'magit-branch-pull-request))
+  (magit-define-popup-action 'magit-branch-popup
+    ?p "Create from pull-request" 'magit-branch-pull-request))
 
 (use-package magit-wip
   :defer t
