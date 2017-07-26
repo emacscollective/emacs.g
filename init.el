@@ -42,12 +42,10 @@
   (add-hook 'auto-compile-inhibit-compile-hook
             'auto-compile-inhibit-compile-detached-git-head))
 
-(use-package epkg
-  :defer t
-  :init (setq epkg-repository
-              (expand-file-name "var/epkgs/" user-emacs-directory)))
-
 (use-package no-littering)
+
+(use-package epkg
+  :defer t)
 
 (use-package custom
   :config
