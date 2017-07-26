@@ -188,14 +188,10 @@
                           'replace)
   ;;
   ;; Diff buffer settings
-  (setq magit-diff-refine-hunk 'all)
-  ;;
-  ;; Load extensions
-  (require 'magit-rockstar)
-  (require 'magit-wip))
+  (setq magit-diff-refine-hunk 'all))
 
 (use-package magit-rockstar
-  :defer t
+  :after magit
   :functions (magit-define-popup-action)
   :config
   (magit-define-popup-action 'magit-commit-popup
@@ -206,7 +202,7 @@
     ?p "Create from pull-request" 'magit-branch-pull-request))
 
 (use-package magit-wip
-  :defer t
+  :after magit
   :config
   (magit-wip-before-change-mode)
   (magit-wip-after-apply-mode)
