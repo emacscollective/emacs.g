@@ -37,6 +37,9 @@
 [submodule "magit-rockstar"]
 	path = lib/magit-rockstar
 	url = git@github.com:tarsius/magit-rockstar.git
+[submodule "magit-tbdiff"]
+	path = lib/magit-tbdiff
+	url = git@github.com:magit/magit-tbdiff.git
 [submodule "orgit"]
 	path = lib/orgit
 	url = git@github.com:magit/orgit.git
