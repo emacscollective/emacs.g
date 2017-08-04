@@ -46,9 +46,15 @@
 	path = lib/magit
 	url = git@github.com:magit/magit.git
 	info-path = Documentation
+[submodule "magit-imerge"]
+	path = lib/magit-imerge
+	url = git@github.com:magit/magit-imerge.git
 [submodule "magit-rockstar"]
 	path = lib/magit-rockstar
 	url = git@github.com:tarsius/magit-rockstar.git
+[submodule "magit-tbdiff"]
+	path = lib/magit-tbdiff
+	url = git@github.com:magit/magit-tbdiff.git
 [submodule "mode-line-debug"]
 	path = lib/mode-line-debug
 	url = git@github.com:tarsius/mode-line-debug.git
