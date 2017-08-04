@@ -67,6 +67,10 @@
   :config
   (setq auto-revert-verbose nil))
 
+(use-package copyright
+  :config
+  (add-hook 'before-save-hook 'copyright-update))
+
 (use-package dash
   :config (dash-enable-font-lock))
 
