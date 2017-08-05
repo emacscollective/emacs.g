@@ -30,6 +30,10 @@
 [submodule "git-modes"]
 	path = lib/git-modes
 	url = git@github.com:magit/git-modes.git
+[submodule "ivy"]
+	path = lib/ivy
+	url = git@github.com:abo-abo/swiper.git
+	info-path = doc
 [submodule "magit"]
 	path = lib/magit
 	url = git@github.com:magit/magit.git

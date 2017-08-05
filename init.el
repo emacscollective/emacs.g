@@ -56,6 +56,22 @@
 (use-package server
   :config (or (server-running-p) (server-mode)))
 
+(use-package counsel
+  :demand t
+  :bind (("M-x"     . counsel-M-x)
+         ("C-x C-f" . counsel-find-file)
+         ("C-x C-l" . counsel-find-library))
+  :config (counsel-mode))
+
+(use-package ivy
+  :demand t
+  :bind (("C-c C-r" . ivy-resume))
+  :config (ivy-mode))
+
+(use-package swiper
+  :defer t
+  :bind (("C-s" . swiper)))
+
 (progn ;     startup
   (message "Loading early birds...done (%.3fs)"
            (float-time (time-subtract (current-time)
@@ -82,9 +98,6 @@
 (use-package help
   :defer t
   :config (temp-buffer-resize-mode))
-
-(progn ;    `isearch'
-  (setq isearch-allow-scroll t))
 
 (use-package lisp-mode
   :config
