@@ -39,7 +39,7 @@
 	info-path = Documentation
 [submodule "no-littering"]
 	path = lib/no-littering
-	url = git@github.com:tarsius/no-littering.git
+	url = git@github.com:emacscollective/no-littering.git
 [submodule "packed"]
 	path = lib/packed
 	url = git@github.com:emacscollective/packed.git
