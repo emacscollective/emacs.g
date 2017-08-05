@@ -3,7 +3,7 @@
 	collective = emacsg
 [submodule "auto-compile"]
 	path = lib/auto-compile
-	url = git@github.com:tarsius/auto-compile.git
+	url = git@github.com:emacscollective/auto-compile.git
 [submodule "borg"]
 	path = lib/borg
 	url = git@github.com:emacscollective/borg.git
@@ -48,7 +48,7 @@
 	url = git@github.com:magit/orgit.git
 [submodule "packed"]
 	path = lib/packed
-	url = git@github.com:tarsius/packed.git
+	url = git@github.com:emacscollective/packed.git
 [submodule "use-package"]
 	path = lib/use-package
 	url = git@github.com:jwiegley/use-package.git
