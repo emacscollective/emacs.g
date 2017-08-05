@@ -4,6 +4,10 @@
 [submodule "auto-compile"]
 	path = lib/auto-compile
 	url = git@github.com:tarsius/auto-compile.git
+[submodule "bash-completion"]
+	path = lib/bash-completion
+	url = git@github.com:szermatt/emacs-bash-completion.git
+	no-byte-compile = sz-testutils.el
 [submodule "borg"]
 	path = lib/borg
 	url = git@github.com:emacscollective/borg.git
