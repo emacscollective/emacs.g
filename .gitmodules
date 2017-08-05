@@ -34,6 +34,13 @@
 	path = lib/magit
 	url = git@github.com:magit/magit.git
 	info-path = Documentation
+[submodule "org"]
+	path = lib/org
+	url = git://orgmode.org/org-mode.git
+	build-step = make
+	load-path = lisp
+	load-path = contrib/lisp
+	info-path = doc
 [submodule "packed"]
 	path = lib/packed
 	url = git@github.com:tarsius/packed.git

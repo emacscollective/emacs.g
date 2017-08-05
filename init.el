@@ -119,6 +119,11 @@
   :defer t
   :config (setq Man-width 80))
 
+(use-package org
+  :defer t
+  :bind (("C-c l"   . org-store-link)
+         ("C-c C-l" . org-insert-link-global)))
+
 (use-package paren
   :config (show-paren-mode))
 
