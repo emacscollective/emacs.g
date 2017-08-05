@@ -34,6 +34,19 @@
 	path = lib/magit
 	url = git@github.com:magit/magit.git
 	info-path = Documentation
+[submodule "mu4e"]
+	path = lib/mu4e
+	url = git@github.com:djcb/mu.git
+	build-step = test -e ./configure || autoreconf -i
+	build-step = ./configure
+	# When first installing mu and after major changes you have to
+	# build it using "make".  If you prefer you can do that every
+	# time mu/mu4e has new commits , but that is much slower, and
+	# usually not necessary.
+	# build-step = make > /dev/null
+	build-step = make -C mu4e > /dev/null
+	build-step = "(borg-update-autoloads \"mu4e\")"
+	load-path = mu4e
 [submodule "packed"]
 	path = lib/packed
 	url = git@github.com:tarsius/packed.git

@@ -119,6 +119,15 @@
   :defer t
   :config (setq Man-width 80))
 
+(use-package mu4e
+  :defer t
+  :init
+  (setq mail-user-agent 'mu4e-user-agent)
+  :config
+  (setq mu4e-completing-read-function 'completing-read)
+  (setq mu4e-compose-dont-reply-to-self t)
+  (setq mu4e-compose-signature-auto-include nil))
+
 (use-package paren
   :config (show-paren-mode))
 
