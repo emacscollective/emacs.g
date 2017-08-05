@@ -63,7 +63,7 @@
 	url = git@github.com:tarsius/morlock.git
 [submodule "no-littering"]
 	path = lib/no-littering
-	url = git@github.com:tarsius/no-littering.git
+	url = git@github.com:emacscollective/no-littering.git
 [submodule "orgit"]
 	path = lib/orgit
 	url = git@github.com:magit/orgit.git
