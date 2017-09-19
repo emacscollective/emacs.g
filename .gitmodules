@@ -55,6 +55,9 @@
 [submodule "magit-tbdiff"]
 	path = lib/magit-tbdiff
 	url = git@github.com:magit/magit-tbdiff.git
+[submodule "markdown-mode"]
+	path = lib/markdown-mode
+	url = git@github.com:jrblevin/markdown-mode.git
 [submodule "mode-line-debug"]
 	path = lib/mode-line-debug
 	url = git@github.com:tarsius/mode-line-debug.git
