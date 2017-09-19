@@ -170,6 +170,8 @@
   ;; Global settings
   (add-hook 'after-save-hook 'magit-after-save-refresh-status t)
   (global-magit-file-mode)
+  (add-to-list 'magit-repository-directories (cons "~/.emacs.d/" 0))
+  (add-to-list 'magit-repository-directories (cons "~/.emacs.d/lib/" 1))
   ;;
   ;; Commit settings
   (setq magit-commit-extend-override-date nil)
