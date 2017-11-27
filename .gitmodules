@@ -34,6 +34,9 @@
 	path = lib/magit
 	url = git@github.com:magit/magit.git
 	info-path = Documentation
+[submodule "magit-popup"]
+	path = lib/magit-popup
+	url = git@github.com:magit/magit-popup.git
 [submodule "package-build"]
 	path = lib/package-build
 	url = git@github.com:melpa/package-build.git
