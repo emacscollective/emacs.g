@@ -49,6 +49,9 @@
 [submodule "magit-imerge"]
 	path = lib/magit-imerge
 	url = git@github.com:magit/magit-imerge.git
+[submodule "magit-popup"]
+	path = lib/magit-popup
+	url = git@github.com:magit/magit-popup.git
 [submodule "magit-rockstar"]
 	path = lib/magit-rockstar
 	url = git@github.com:tarsius/magit-rockstar.git
