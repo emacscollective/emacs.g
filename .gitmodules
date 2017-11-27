@@ -43,6 +43,9 @@
 	path = lib/magit
 	url = git@github.com:magit/magit.git
 	info-path = Documentation
+[submodule "magit-popup"]
+	path = lib/magit-popup
+	url = git@github.com:magit/magit-popup.git
 [submodule "mode-line-debug"]
 	path = lib/mode-line-debug
 	url = git@github.com:tarsius/mode-line-debug.git
