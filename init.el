@@ -190,10 +190,6 @@
                           'magit-insert-modules
                           'magit-insert-stashes
                           'append)
-  (magit-add-section-hook 'magit-status-sections-hook
-                          'magit-insert-unpulled-from-upstream-or-recent
-                          'magit-insert-unpulled-from-upstream
-                          'replace)
   ;;
   ;; Diff buffer settings
   (setq magit-diff-refine-hunk 'all))
