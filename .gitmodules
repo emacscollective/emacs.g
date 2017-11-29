@@ -37,6 +37,15 @@
 [submodule "magit-popup"]
 	path = lib/magit-popup
 	url = git@github.com:magit/magit-popup.git
+[submodule "notmuch"]
+	path = lib/notmuch
+	url = git://notmuchmail.org/git/notmuch
+	load-path = emacs
+	info-path = doc/_build/texinfo
+	build-step = ./configure
+	build-step = make
+	build-step = make sphinx-texinfo
+	build-step = borg-makeinfo
 [submodule "packed"]
 	path = lib/packed
 	url = git@github.com:emacscollective/packed.git
