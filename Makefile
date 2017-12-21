@@ -13,6 +13,11 @@ all: build
 SILENCIO  = --load subr-x
 SILENCIO += --eval "(put 'if-let 'byte-obsolete-info nil)"
 SILENCIO += --eval "(put 'when-let 'byte-obsolete-info nil)"
+SILENCIO += --eval "(fset 'original-message (symbol-function 'message))"
+SILENCIO += --eval "(fset 'message\
+(lambda (format &rest args)\
+  (unless (equal format \"pcase-memoize: equal first branch, yet different\")\
+    (apply 'original-message format args))))"
 
 help:
 	$(info )
