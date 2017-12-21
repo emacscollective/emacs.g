@@ -24,9 +24,6 @@
 [submodule "epkg"]
 	path = lib/epkg
 	url = git@github.com:emacscollective/epkg.git
-[submodule "finalize"]
-	path = lib/finalize
-	url = git@github.com:skeeto/elisp-finalize.git
 [submodule "git-modes"]
 	path = lib/git-modes
 	url = git@github.com:magit/git-modes.git
