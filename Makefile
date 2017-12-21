@@ -10,6 +10,10 @@ EMACS ?= emacs
 
 all: build
 
+SILENCIO  = --load subr-x
+SILENCIO += --eval "(put 'if-let 'byte-obsolete-info nil)"
+SILENCIO += --eval "(put 'when-let 'byte-obsolete-info nil)"
+
 help:
 	$(info )
 	$(info make [all|build]    = rebuild all drones and init files)
@@ -21,7 +25,7 @@ help:
 
 build:
 	@rm -f init.elc
-	@$(EMACS) -Q --batch -L lib/borg --load borg \
+	@$(EMACS) -Q --batch -L lib/borg --load borg $(SILENCIO) \
 	--funcall borg-initialize \
 	--funcall borg-batch-rebuild 2>&1
 
@@ -33,12 +37,12 @@ build-init:
 
 quick:
 	@rm -f init.elc
-	@$(EMACS) -Q --batch -L lib/borg --load borg \
+	@$(EMACS) -Q --batch -L lib/borg --load borg $(SILENCIO) \
 	--funcall borg-initialize \
 	--eval  '(borg-batch-rebuild t)' 2>&1
 
 lib/%: .FORCE
-	@$(EMACS) -Q --batch -L lib/borg --load borg \
+	@$(EMACS) -Q --batch -L lib/borg --load borg $(SILENCIO) \
 	--funcall borg-initialize \
 	--eval  '(borg-build "$(@F)")' 2>&1
 
