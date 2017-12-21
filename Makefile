@@ -5,7 +5,7 @@
 
 EMACS ?= emacs
 
-.PHONY: all help build build-init quick bootstrap
+.PHONY: all help build build-init quick bootstrap clean
 .FORCE:
 
 all: build
@@ -26,6 +26,7 @@ help:
 	$(info make lib/DRONE      = rebuild DRONE)
 	$(info make build-init     = rebuild init files)
 	$(info make bootstrap      = bootstrap collective or new drones)
+	$(info make clean          = remove all *.elc and *-autoloads.el)
 	@printf "\n"
 
 build:
@@ -58,3 +59,8 @@ bootstrap:
 	@bin/borg-bootstrap
 	@printf "\n=== Running 'make build' ===\n\n"
 	@make build
+
+clean:
+	@find lib -name '*-autoloads.el' -exec rm '{}' ';'
+	@find lib -name '*.elc' -exec rm '{}' ';'
+	@rm -f init.elc
