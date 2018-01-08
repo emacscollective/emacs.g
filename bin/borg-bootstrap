@@ -5,12 +5,12 @@
 # Author: Jonas Bernoulli <jonas@bernoul.li>
 # License: GPL v3 <https://www.gnu.org/licenses/gpl-3.0.txt>
 
-hive_remote=$(git config -f .gitmodules borg.collective)
-push_remote=$(git config -f .gitmodules borg.pushDefault)
-
 toplevel=$(git rev-parse --show-toplevel)
 test -n "$toplevel" || exit 2
 cd "$toplevel"
+
+hive_remote=$(git config -f .gitmodules borg.collective)
+push_remote=$(git config -f .gitmodules borg.pushDefault)
 
 git submodule--helper list |
 while read mode sha1 stage path
@@ -19,7 +19,7 @@ do
     then
         name=$(git submodule--helper name "$path")
 
-        echo "\n--- [$name] ---\n"
+        echo -e "\n--- [$name] ---\n"
 
         git submodule--helper clone \
             --name "$name" \
