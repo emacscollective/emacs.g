@@ -196,9 +196,7 @@
   (magit-define-popup-action 'magit-commit-popup
     ?n "Reshelve" 'magit-reshelve)
   (magit-define-popup-action 'magit-rebase-popup
-    ?R "Rockstar" 'magit-rockstar)
-  (magit-define-popup-action 'magit-branch-popup
-    ?p "Create from pull-request" 'magit-branch-pull-request))
+    ?R "Rockstar" 'magit-rockstar))
 
 (use-package magit-wip
   :after magit
