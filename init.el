@@ -141,6 +141,8 @@
   ;; Disable safety nets
   (setq magit-commit-squash-confirm nil)
   (setq magit-save-repository-buffers 'dontask)
+  (setf (nth 2 (assq 'magit-stash-pop  magit-dwim-selection)) t)
+  (setf (nth 2 (assq 'magit-stash-drop magit-dwim-selection)) t)
   (add-to-list 'magit-no-confirm 'safe-with-wip t)
   (add-to-list 'magit-no-confirm 'rename t)
   (add-to-list 'magit-no-confirm 'resurrect t)
