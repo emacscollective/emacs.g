@@ -179,6 +179,10 @@
                           'magit-insert-modules
                           'magit-insert-stashes
                           'append)
+  (magit-add-section-hook 'magit-status-sections-hook
+                          'magit-insert-worktrees
+                          'magit-insert-modules
+                          'append)
   ;;
   ;; Diff buffer settings
   (setq magit-diff-refine-hunk 'all))
