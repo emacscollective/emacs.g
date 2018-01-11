@@ -158,6 +158,8 @@
   ;; Disable safety nets
   (setq magit-commit-squash-confirm nil)
   (setq magit-save-repository-buffers 'dontask)
+  (setf (nth 2 (assq 'magit-stash-pop  magit-dwim-selection)) t)
+  (setf (nth 2 (assq 'magit-stash-drop magit-dwim-selection)) t)
   (add-to-list 'magit-no-confirm 'safe-with-wip t)
   (add-to-list 'magit-no-confirm 'rename t)
   (add-to-list 'magit-no-confirm 'resurrect t)
@@ -196,6 +198,10 @@
                           'magit-insert-modules
                           'magit-insert-stashes
                           'append)
+  (magit-add-section-hook 'magit-status-sections-hook
+                          'magit-insert-worktrees
+                          'magit-insert-modules
+                          'append)
   ;;
   ;; Diff buffer settings
   (setq magit-diff-refine-hunk 'all))
@@ -206,10 +212,9 @@
   :config
   (magit-define-popup-action 'magit-commit-popup
     ?n "Reshelve" 'magit-reshelve)
-  (magit-define-popup-action 'magit-rebase-popup
-    ?R "Rockstar" 'magit-rockstar)
-  (magit-define-popup-action 'magit-branch-popup
-    ?p "Create from pull-request" 'magit-branch-pull-request))
+  (plist-put magit-rebase-popup :actions
+             (-replace-at 11 '(?R "to change dates" magit-rockstar)
+                          (plist-get magit-rebase-popup :actions))))
 
 (use-package magit-wip
   :after magit
