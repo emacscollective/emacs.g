@@ -195,8 +195,9 @@
   :config
   (magit-define-popup-action 'magit-commit-popup
     ?n "Reshelve" 'magit-reshelve)
-  (magit-define-popup-action 'magit-rebase-popup
-    ?R "Rockstar" 'magit-rockstar))
+  (plist-put magit-rebase-popup :actions
+             (-replace-at 11 '(?R "to change dates" magit-rockstar)
+                          (plist-get magit-rebase-popup :actions))))
 
 (use-package magit-wip
   :after magit
