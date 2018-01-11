@@ -74,6 +74,7 @@
   (setq auto-revert-verbose nil))
 
 (use-package copyright
+  :defer t
   :config
   (add-hook 'before-save-hook 'copyright-update))
 
