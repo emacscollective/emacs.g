@@ -30,6 +30,9 @@
 [submodule "fill-column-indicator"]
 	path = lib/fill-column-indicator
 	url = git@github.com:alpaker/Fill-Column-Indicator.git
+[submodule "ghub"]
+	path = lib/ghub
+	url = git@github.com:magit/ghub.git
 [submodule "git-modes"]
 	path = lib/git-modes
 	url = git@github.com:magit/git-modes.git
