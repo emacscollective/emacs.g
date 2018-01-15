@@ -3,7 +3,7 @@
 	collective = emacsg
 [submodule "auto-compile"]
 	path = lib/auto-compile
-	url = git@github.com:tarsius/auto-compile.git
+	url = git@github.com:emacscollective/auto-compile.git
 [submodule "borg"]
 	path = lib/borg
 	url = git@github.com:emacscollective/borg.git
@@ -24,9 +24,9 @@
 [submodule "epkg"]
 	path = lib/epkg
 	url = git@github.com:emacscollective/epkg.git
-[submodule "finalize"]
-	path = lib/finalize
-	url = git@github.com:skeeto/elisp-finalize.git
+[submodule "ghub"]
+	path = lib/ghub
+	url = git@github.com:magit/ghub.git
 [submodule "git-modes"]
 	path = lib/git-modes
 	url = git@github.com:magit/git-modes.git
@@ -38,9 +38,12 @@
 	path = lib/magit
 	url = git@github.com:magit/magit.git
 	info-path = Documentation
+[submodule "magit-popup"]
+	path = lib/magit-popup
+	url = git@github.com:magit/magit-popup.git
 [submodule "packed"]
 	path = lib/packed
-	url = git@github.com:tarsius/packed.git
+	url = git@github.com:emacscollective/packed.git
 [submodule "use-package"]
 	path = lib/use-package
 	url = git@github.com:jwiegley/use-package.git
