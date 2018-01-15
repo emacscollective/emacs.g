@@ -10,6 +10,7 @@
   (setq user-emacs-directory (file-name-directory user-init-file))
   (message "Loading %s..." user-init-file)
   (setq package-enable-at-startup nil)
+  ;; (package-initialize)
   (setq inhibit-startup-buffer-menu t)
   (setq inhibit-startup-screen t)
   (setq inhibit-startup-echo-area-message "locutus")
@@ -28,6 +29,11 @@
 (progn ;    `use-package'
   (require  'use-package)
   (setq use-package-verbose t))
+
+(use-package subr-x
+  :config
+  (put 'if-let   'byte-obsolete-info nil)
+  (put 'when-let 'byte-obsolete-info nil))
 
 (use-package auto-compile
   :demand t
@@ -100,20 +106,9 @@
          ("C-x M-g" . magit-dispatch-popup))
   :config
   (magit-add-section-hook 'magit-status-sections-hook
-                          'magit-insert-modules-unpulled-from-upstream
-                          'magit-insert-unpulled-from-upstream)
-  (magit-add-section-hook 'magit-status-sections-hook
-                          'magit-insert-modules-unpulled-from-pushremote
-                          'magit-insert-unpulled-from-upstream)
-  (magit-add-section-hook 'magit-status-sections-hook
-                          'magit-insert-modules-unpushed-to-upstream
-                          'magit-insert-unpulled-from-upstream)
-  (magit-add-section-hook 'magit-status-sections-hook
-                          'magit-insert-modules-unpushed-to-pushremote
-                          'magit-insert-unpulled-from-upstream)
-  (magit-add-section-hook 'magit-status-sections-hook
-                          'magit-insert-submodules
-                          'magit-insert-unpulled-from-upstream))
+                          'magit-insert-modules
+                          'magit-insert-stashes
+                          'append))
 
 (use-package man
   :defer t
