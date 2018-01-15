@@ -30,9 +30,6 @@
 [submodule "git-modes"]
 	path = lib/git-modes
 	url = git@github.com:magit/git-modes.git
-[submodule "macrostep"]
-	path = lib/macrostep
-	url = git@github.com:joddie/macrostep.git
 [submodule "magit"]
 	path = lib/magit
 	url = git@github.com:magit/magit.git
