@@ -32,7 +32,7 @@ update the drones you have assimilated yourself.
 If you do base your own configuration on this collective and make it
 publically available as source of inspiration for others, then please
 do so by forking the upstream repository, which is available from
-[Github][gh-this], [Gitlab][gl-this], and [Bitbucket][bb-this].
+[Github][gh-this].
 
 You might also want to adjust this description.
 
@@ -43,7 +43,7 @@ It is also possible to create collectives that can be shared between
 and worked on by many Emacs users, i.e. borg-based starter-kits.
 Check out alternative collectives by browsing the repositories owned
 by the `emacscollective` organisation/group/team, which is available
-on [Github][gh-all], [Gitlab][gl-all], and [Bitbucket][bb-all].
+on [Github][gh-all].
 
 Another alternative is the `bootstrap` collective.  It assimilates a
 single drone, `borg` itself, and is intended for users for whom even
@@ -54,8 +54,4 @@ the `emacs.g` collective is to opinionated.
 [manual]:  https://emacsmirror.net/manual/borg
 
 [gh-this]: https://github.com/emacscollective/emacs.g
-[gl-this]: https://gitlab.com/emacscollective/emacs.g
-[bb-this]: https://bitbucket.com/emacscollective/emacs.g
 [gh-all]:  https://github.com/emacscollective
-[gl-all]:  https://gitlab.com/emacscollective
-[bb-all]:  https://bitbucket.com/emacscollective
