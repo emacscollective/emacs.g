@@ -39,7 +39,7 @@
 	url = git@github.com:magit/magit-popup.git
 [submodule "org"]
 	path = lib/org
-	url = git://orgmode.org/org-mode.git
+	url = git@code.orgmode.org:bzg/org-mode.git
 	build-step = make
 	load-path = lisp
 	load-path = contrib/lisp
