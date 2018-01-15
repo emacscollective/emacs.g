@@ -39,9 +39,6 @@
 [submodule "hl-todo"]
 	path = lib/hl-todo
 	url = git@github.com:tarsius/hl-todo.git
-[submodule "macrostep"]
-	path = lib/macrostep
-	url = git@github.com:joddie/macrostep.git
 [submodule "magit"]
 	path = lib/magit
 	url = git@github.com:magit/magit.git
