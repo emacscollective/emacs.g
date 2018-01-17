@@ -83,6 +83,7 @@
   :config (setq dired-listing-switches "-alh"))
 
 (use-package eldoc
+  :when (version< "25" emacs-version)
   :config (global-eldoc-mode))
 
 (use-package help
