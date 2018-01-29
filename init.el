@@ -99,6 +99,7 @@
   :config (setq dired-listing-switches "-alh"))
 
 (use-package eldoc
+  :when (version< "25" emacs-version)
   :config (global-eldoc-mode))
 
 (use-package help
@@ -144,6 +145,7 @@
   :config (savehist-mode))
 
 (use-package saveplace
+  :when (version< "25" emacs-version)
   :config (save-place-mode))
 
 (use-package simple
