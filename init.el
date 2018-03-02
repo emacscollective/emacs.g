@@ -183,6 +183,8 @@
   (global-magit-file-mode)
   (add-to-list 'magit-repository-directories (cons "~/.emacs.d/" 0))
   (add-to-list 'magit-repository-directories (cons "~/.emacs.d/lib/" 1))
+  (define-key magit-mode-map [remap previous-line] 'magit-previous-line)
+  (define-key magit-mode-map [remap next-line] 'magit-next-line)
   ;;
   ;; Commit settings
   (setq magit-commit-extend-override-date nil)
@@ -196,7 +198,7 @@
   (setq magit-push-current-set-remote-if-missing 'default)
   ;;
   ;; Status buffer settings
-  (setq magit-status-expand-stashes nil)
+  (add-to-list 'magit-section-initial-visibility-alist '(stashes . hide))
   (magit-add-section-hook 'magit-status-sections-hook
                           'magit-insert-modules
                           'magit-insert-stashes
@@ -207,16 +209,16 @@
                           'append)
   ;;
   ;; Diff buffer settings
-  (setq magit-diff-refine-hunk 'all))
-
-(use-package magit-rockstar
-  :after magit
-  :functions (magit-define-popup-action)
-  :config
+  (setq magit-diff-refine-hunk 'all)
+  ;;
+  ;; Revision buffer settings
+  (setq magit-revision-show-gravatars '("^Author:     " . "^Commit:     "))
+  ;;
+  ;; Additional popup actions
   (magit-define-popup-action 'magit-commit-popup
-    ?n "Reshelve" 'magit-reshelve)
+    ?n "Reshelve" 'magit-commit-reshelve)
   (plist-put magit-rebase-popup :actions
-             (-replace-at 11 '(?R "to change dates" magit-rockstar)
+             (-replace-at 11 '(?R "to change dates" magit-reshelve-since)
                           (plist-get magit-rebase-popup :actions))))
 
 (use-package magit-wip
