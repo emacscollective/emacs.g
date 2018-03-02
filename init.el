@@ -189,16 +189,13 @@
                           'append)
   ;;
   ;; Diff buffer settings
-  (setq magit-diff-refine-hunk 'all))
-
-(use-package magit-rockstar
-  :after magit
-  :functions (magit-define-popup-action)
-  :config
+  (setq magit-diff-refine-hunk 'all)
+  ;;
+  ;; Additional popup actions
   (magit-define-popup-action 'magit-commit-popup
-    ?n "Reshelve" 'magit-reshelve)
+    ?n "Reshelve" 'magit-commit-reshelve)
   (plist-put magit-rebase-popup :actions
-             (-replace-at 11 '(?R "to change dates" magit-rockstar)
+             (-replace-at 11 '(?R "to change dates" magit-reshelve-since)
                           (plist-get magit-rebase-popup :actions))))
 
 (use-package magit-wip
