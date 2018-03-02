@@ -191,6 +191,9 @@
   ;; Diff buffer settings
   (setq magit-diff-refine-hunk 'all)
   ;;
+  ;; Revision buffer settings
+  (setq magit-revision-show-gravatars '("^Author:     " . "^Commit:     "))
+  ;;
   ;; Additional popup actions
   (magit-define-popup-action 'magit-commit-popup
     ?n "Reshelve" 'magit-commit-reshelve)
