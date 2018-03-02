@@ -180,7 +180,7 @@
   (setq magit-push-current-set-remote-if-missing 'default)
   ;;
   ;; Status buffer settings
-  (setq magit-status-expand-stashes nil)
+  (add-to-list 'magit-section-initial-visibility-alist '(stashes . hide))
   (magit-add-section-hook 'magit-status-sections-hook
                           'magit-insert-modules
                           'magit-insert-stashes
