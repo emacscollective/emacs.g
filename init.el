@@ -231,6 +231,11 @@
   (setq magit-wip-after-apply-mode-lighter "")
   (setq magit-wip-after-save-local-mode-lighter ""))
 
+(use-package magithub
+  :after magit
+  :config
+  (magithub-feature-autoinject t))
+
 (use-package man
   :defer t
   :config (setq Man-width 80))

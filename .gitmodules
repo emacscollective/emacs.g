@@ -1,6 +1,9 @@
 [borg]
 	pushDefault = locutus
 	collective = emacsg
+[submodule "apiwrap"]
+	path = lib/apiwrap
+	url = git@github.com:vermiculus/apiwrap.el.git
 [submodule "auto-compile"]
 	path = lib/auto-compile
 	url = git@github.com:emacscollective/auto-compile.git
@@ -33,6 +36,9 @@
 [submodule "ghub"]
 	path = lib/ghub
 	url = git@github.com:magit/ghub.git
+[submodule "ghub+"]
+	path = lib/ghub+
+	url = git@github.com:vermiculus/ghub-plus.git
 [submodule "git-modes"]
 	path = lib/git-modes
 	url = git@github.com:magit/git-modes.git
@@ -55,6 +61,9 @@
 [submodule "magit-tbdiff"]
 	path = lib/magit-tbdiff
 	url = git@github.com:magit/magit-tbdiff.git
+[submodule "magithub"]
+	path = lib/magithub
+	url = git@github.com:vermiculus/magithub.git
 [submodule "markdown-mode"]
 	path = lib/markdown-mode
 	url = git@github.com:jrblevin/markdown-mode.git
@@ -88,6 +97,9 @@
 [submodule "rainbow-mode"]
 	path = lib/rainbow-mode
 	url = git@github.com:emacsmirror/rainbow-mode.git
+[submodule "s"]
+	path = lib/s
+	url = git@github.com:magnars/s.el.git
 [submodule "undo-tree"]
 	path = lib/undo-tree
 	url = http://www.dr-qubit.org/git/undo-tree.git
