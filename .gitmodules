@@ -48,8 +48,7 @@
 	url = git@github.com:emacscollective/packed.git
 [submodule "undo-tree"]
 	path = lib/undo-tree
-	url = http://www.dr-qubit.org/git/undo-tree.git
-	remote = emacsg git@github.com:emacscollective/undo-tree.git
+	url = git@github.com:emacsorphanage/undo-tree.git
 [submodule "use-package"]
 	path = lib/use-package
 	url = git@github.com:jwiegley/use-package.git
