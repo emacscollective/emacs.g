@@ -226,10 +226,7 @@
   :config
   (magit-wip-before-change-mode)
   (magit-wip-after-apply-mode)
-  (magit-wip-after-save-mode)
-  (setq magit-wip-before-change-mode-lighter "")
-  (setq magit-wip-after-apply-mode-lighter "")
-  (setq magit-wip-after-save-local-mode-lighter ""))
+  (magit-wip-after-save-mode))
 
 (use-package magithub
   :after magit
