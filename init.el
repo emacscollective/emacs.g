@@ -180,7 +180,6 @@
   ;;
   ;; Global settings
   (add-hook 'after-save-hook 'magit-after-save-refresh-status t)
-  (global-magit-file-mode)
   (add-to-list 'magit-repository-directories (cons "~/.emacs.d/" 0))
   (add-to-list 'magit-repository-directories (cons "~/.emacs.d/lib/" 1))
   (define-key magit-mode-map [remap previous-line] 'magit-previous-line)
