@@ -51,6 +51,7 @@
 [submodule "magit"]
 	path = lib/magit
 	url = git@github.com:magit/magit.git
+	recursive-byte-compile = true
 	info-path = Documentation
 [submodule "magit-imerge"]
 	path = lib/magit-imerge

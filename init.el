@@ -30,11 +30,6 @@
   (require  'use-package)
   (setq use-package-verbose t))
 
-(use-package subr-x
-  :config
-  (put 'if-let   'byte-obsolete-info nil)
-  (put 'when-let 'byte-obsolete-info nil))
-
 (use-package auto-compile
   :demand t
   :config
