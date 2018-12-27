@@ -200,10 +200,7 @@
 
 (use-package magit-wip
   :after magit
-  :config
-  (magit-wip-before-change-mode)
-  (magit-wip-after-apply-mode)
-  (magit-wip-after-save-mode))
+  :config (magit-wip-mode))
 
 (use-package man
   :defer t
