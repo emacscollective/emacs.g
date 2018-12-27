@@ -202,11 +202,6 @@
   (magit-wip-after-apply-mode)
   (magit-wip-after-save-mode))
 
-(use-package magithub
-  :after magit
-  :config
-  (magithub-feature-autoinject t))
-
 (use-package man
   :defer t
   :config (setq Man-width 80))
