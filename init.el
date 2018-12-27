@@ -88,6 +88,9 @@
   :when (version< "25" emacs-version)
   :config (global-eldoc-mode))
 
+(use-package forge
+  :after magit)
+
 (use-package git-commit
   :defer t
   :config
