@@ -39,9 +39,7 @@
   (setq auto-compile-mode-line-counter            t)
   (setq auto-compile-source-recreate-deletes-dest t)
   (setq auto-compile-toggle-deletes-nonlib-dest   t)
-  (setq auto-compile-update-autoloads             t)
-  (add-hook 'auto-compile-inhibit-compile-hook
-            'auto-compile-inhibit-compile-detached-git-head))
+  (setq auto-compile-update-autoloads             t))
 
 (use-package epkg
   :defer t
