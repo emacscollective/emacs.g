@@ -81,6 +81,9 @@
   (global-diff-hl-mode)
   (add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh t))
 
+(use-package diff-hl-flydiff
+  :config (diff-hl-flydiff-mode))
+
 (use-package dim-autoload
   :config (global-dim-autoload-cookies-mode))
 
@@ -102,6 +105,9 @@
   (setq fci-rule-column 80)
   (add-hook 'emacs-lisp-mode-hook 'fci-mode)
   (add-hook 'git-commit-setup-hook 'fci-mode))
+
+(use-package forge
+  :after magit)
 
 (use-package git-commit
   :defer t
@@ -215,15 +221,7 @@
 
 (use-package magit-wip
   :after magit
-  :config
-  (magit-wip-before-change-mode)
-  (magit-wip-after-apply-mode)
-  (magit-wip-after-save-mode))
-
-(use-package magithub
-  :after magit
-  :config
-  (magithub-feature-autoinject t))
+  :config (magit-wip-mode))
 
 (use-package man
   :defer t
