@@ -95,6 +95,9 @@
 [submodule "rainbow-mode"]
 	path = lib/rainbow-mode
 	url = git@github.com:emacsmirror/rainbow-mode.git
+[submodule "undo-tree"]
+	path = lib/undo-tree
+	url = git@github.com:emacsorphanage/undo-tree.git
 [submodule "treepy"]
 	path = lib/treepy
 	url = git@github.com:volrath/treepy.el.git
