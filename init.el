@@ -152,10 +152,11 @@
   ;;
   ;; Key bindings
   :bind (("C-x g"   . magit-status)
-         ("C-x M-g" . magit-dispatch-popup))
+         ("C-x M-g" . magit-dispatch))
   :config
   (define-key magit-mode-map "f" 'magit-pull-and-fetch-popup)
   (define-key magit-mode-map "F" nil)
+  (define-key magit-file-mode-map (kbd "C-c g") 'magit-file-dispatch)
   ;;
   ;; Disable safety nets
   (setq magit-commit-squash-confirm nil)
@@ -166,9 +167,6 @@
   (add-to-list 'magit-no-confirm 'rename t)
   (add-to-list 'magit-no-confirm 'resurrect t)
   (add-to-list 'magit-no-confirm 'trash t)
-  ;;
-  ;; Disable usage information
-  (setq magit-popup-show-help-echo nil)
   ;;
   ;; Window managment
   (setq magit-display-buffer-function
@@ -210,14 +208,7 @@
   (setq magit-diff-refine-hunk 'all)
   ;;
   ;; Revision buffer settings
-  (setq magit-revision-show-gravatars '("^Author:     " . "^Commit:     "))
-  ;;
-  ;; Additional popup actions
-  (magit-define-popup-action 'magit-commit-popup
-    ?n "Reshelve" 'magit-commit-reshelve)
-  (plist-put magit-rebase-popup :actions
-             (-replace-at 11 '(?R "to change dates" magit-reshelve-since)
-                          (plist-get magit-rebase-popup :actions))))
+  (setq magit-revision-show-gravatars t))
 
 (use-package magit-wip
   :after magit
