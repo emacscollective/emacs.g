@@ -190,7 +190,7 @@
   (setq magit-diff-refine-hunk 'all)
   ;;
   ;; Revision buffer settings
-  (setq magit-revision-show-gravatars '("^Author:     " . "^Commit:     ")))
+  (setq magit-revision-show-gravatars t))
 
 (use-package magit-wip
   :after magit
