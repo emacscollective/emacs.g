@@ -138,6 +138,7 @@
   :config
   (define-key magit-mode-map "f" 'magit-pull-and-fetch-popup)
   (define-key magit-mode-map "F" nil)
+  (define-key magit-file-mode-map (kbd "C-c g") 'magit-file-dispatch)
   ;;
   ;; Disable safety nets
   (setq magit-commit-squash-confirm nil)
