@@ -50,6 +50,7 @@
 [submodule "transient"]
 	path = lib/transient
 	url = git@github.com:magit/transient.git
+	info-path = docs
 [submodule "treepy"]
 	path = lib/treepy
 	url = git@github.com:volrath/treepy.el.git
