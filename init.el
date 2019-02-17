@@ -162,8 +162,6 @@
   (add-hook 'after-save-hook 'magit-after-save-refresh-status t)
   (add-to-list 'magit-repository-directories (cons "~/.emacs.d/" 0))
   (add-to-list 'magit-repository-directories (cons "~/.emacs.d/lib/" 1))
-  (define-key magit-mode-map [remap previous-line] 'magit-previous-line)
-  (define-key magit-mode-map [remap next-line] 'magit-next-line)
   ;;
   ;; Commit settings
   (setq magit-commit-extend-override-date nil)
