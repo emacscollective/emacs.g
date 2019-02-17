@@ -154,7 +154,8 @@
   :bind (("C-x g"   . magit-status)
          ("C-x M-g" . magit-dispatch))
   :config
-  (define-key magit-mode-map "f" 'magit-pull-and-fetch-popup)
+  (setq magit-pull-or-fetch t)
+  (define-key magit-mode-map "f" 'magit-pull)
   (define-key magit-mode-map "F" nil)
   (define-key magit-file-mode-map (kbd "C-c g") 'magit-file-dispatch)
   ;;
@@ -179,8 +180,6 @@
   (add-hook 'after-save-hook 'magit-after-save-refresh-status t)
   (add-to-list 'magit-repository-directories (cons "~/.emacs.d/" 0))
   (add-to-list 'magit-repository-directories (cons "~/.emacs.d/lib/" 1))
-  (define-key magit-mode-map [remap previous-line] 'magit-previous-line)
-  (define-key magit-mode-map [remap next-line] 'magit-next-line)
   ;;
   ;; Commit settings
   (setq magit-commit-extend-override-date nil)
@@ -194,7 +193,11 @@
   (setq magit-push-current-set-remote-if-missing 'default)
   ;;
   ;; Status buffer settings
-  (add-to-list 'magit-section-initial-visibility-alist '(stashes . hide))
+  (add-to-list 'magit-section-initial-visibility-alist
+               '(magit-status-initial-section . show))
+  (setq magit-status-initial-section
+        '(((unpulled . "..@{upstream}") (status))
+          ((unpushed . "@{upstream}..") (status))))
   (magit-add-section-hook 'magit-status-sections-hook
                           'magit-insert-modules
                           'magit-insert-stashes
