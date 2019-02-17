@@ -175,6 +175,11 @@
   (setq magit-push-current-set-remote-if-missing 'default)
   ;;
   ;; Status buffer settings
+  (add-to-list 'magit-section-initial-visibility-alist
+               '(magit-status-initial-section . show))
+  (setq magit-status-initial-section
+        '(((unpulled . "..@{upstream}") (status))
+          ((unpushed . "@{upstream}..") (status))))
   (magit-add-section-hook 'magit-status-sections-hook
                           'magit-insert-modules
                           'magit-insert-stashes
