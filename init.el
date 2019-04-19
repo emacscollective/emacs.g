@@ -98,7 +98,7 @@
 (use-package magit
   :defer t
   :bind (("C-x g"   . magit-status)
-         ("C-x M-g" . magit-dispatch-popup))
+         ("C-x M-g" . magit-dispatch))
   :config
   (magit-add-section-hook 'magit-status-sections-hook
                           'magit-insert-modules
