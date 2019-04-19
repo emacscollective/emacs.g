@@ -33,9 +33,6 @@
 [submodule "graphql"]
 	path = lib/graphql
 	url = git@github.com:vermiculus/graphql.el.git
-[submodule "hydra"]
-	path = lib/hydra
-	url = git@github.com:abo-abo/hydra.git
 [submodule "magit"]
 	path = lib/magit
 	url = git@github.com:magit/magit.git
