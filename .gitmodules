@@ -41,9 +41,6 @@
 	url = git@github.com:magit/magit.git
 	recursive-byte-compile = true
 	info-path = Documentation
-[submodule "magit-popup"]
-	path = lib/magit-popup
-	url = git@github.com:magit/magit-popup.git
 [submodule "packed"]
 	path = lib/packed
 	url = git@github.com:emacscollective/packed.git
