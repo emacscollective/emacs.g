@@ -83,13 +83,6 @@
   :when (version< "25" emacs-version)
   :config (global-eldoc-mode))
 
-(use-package fill-column-indicator
-  :config
-  (setq fci-rule-width 2)
-  (setq fci-rule-column 80)
-  (add-hook 'emacs-lisp-mode-hook 'fci-mode)
-  (add-hook 'git-commit-setup-hook 'fci-mode))
-
 (use-package help
   :defer t
   :config (temp-buffer-resize-mode))
