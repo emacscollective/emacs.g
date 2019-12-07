@@ -30,7 +30,7 @@ Or you can just update and further configure these drones as you would
 update the drones you have assimilated yourself.
 
 If you do base your own configuration on this collective and make it
-publically available as source of inspiration for others, then please
+publicly available as source of inspiration for others, then please
 do so by forking the upstream repository, which is available from
 [Github].
 
