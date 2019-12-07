@@ -154,9 +154,6 @@
   :bind (("C-x g"   . magit-status)
          ("C-x M-g" . magit-dispatch))
   :config
-  (setq magit-pull-or-fetch t)
-  (define-key magit-mode-map "f" 'magit-pull)
-  (define-key magit-mode-map "F" nil)
   (define-key magit-file-mode-map (kbd "C-c g") 'magit-file-dispatch)
   ;;
   ;; Disable safety nets
