@@ -27,9 +27,6 @@
 [submodule "epkg"]
 	path = lib/epkg
 	url = git@github.com:emacscollective/epkg.git
-[submodule "fill-column-indicator"]
-	path = lib/fill-column-indicator
-	url = git@github.com:alpaker/Fill-Column-Indicator.git
 [submodule "forge"]
 	path = lib/forge
 	url = git@github.com:magit/forge.git
