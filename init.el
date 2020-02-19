@@ -10,6 +10,7 @@
   (setq user-emacs-directory (file-name-directory user-init-file))
   (message "Loading %s..." user-init-file)
   (setq package-enable-at-startup nil)
+  ;; (package-initialize)
   (setq inhibit-startup-buffer-menu t)
   (setq inhibit-startup-screen t)
   (setq inhibit-startup-echo-area-message "locutus")
@@ -38,9 +39,7 @@
   (setq auto-compile-mode-line-counter            t)
   (setq auto-compile-source-recreate-deletes-dest t)
   (setq auto-compile-toggle-deletes-nonlib-dest   t)
-  (setq auto-compile-update-autoloads             t)
-  (add-hook 'auto-compile-inhibit-compile-hook
-            'auto-compile-inhibit-compile-detached-git-head))
+  (setq auto-compile-update-autoloads             t))
 
 (use-package epkg
   :defer t
@@ -48,6 +47,7 @@
               (expand-file-name "var/epkgs/" user-emacs-directory)))
 
 (use-package custom
+  :no-require t
   :config
   (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
   (when (file-exists-p custom-file)
@@ -77,6 +77,7 @@
   :config (setq dired-listing-switches "-alh"))
 
 (use-package eldoc
+  :when (version< "25" emacs-version)
   :config (global-eldoc-mode))
 
 (use-package help
@@ -97,7 +98,7 @@
 (use-package magit
   :defer t
   :bind (("C-x g"   . magit-status)
-         ("C-x M-g" . magit-dispatch-popup))
+         ("C-x M-g" . magit-dispatch))
   :config
   (magit-add-section-hook 'magit-status-sections-hook
                           'magit-insert-modules
@@ -125,6 +126,7 @@
   :config (savehist-mode))
 
 (use-package saveplace
+  :when (version< "25" emacs-version)
   :config (save-place-mode))
 
 (use-package simple

@@ -24,19 +24,21 @@
 [submodule "epkg"]
 	path = lib/epkg
 	url = git@github.com:emacscollective/epkg.git
-[submodule "finalize"]
-	path = lib/finalize
-	url = git@github.com:skeeto/elisp-finalize.git
+[submodule "ghub"]
+	path = lib/ghub
+	url = git@github.com:magit/ghub.git
 [submodule "git-modes"]
 	path = lib/git-modes
 	url = git@github.com:magit/git-modes.git
+[submodule "libgit"]
+	path = lib/libgit
+	url = git@github.com:magit/libegit2.git
+	build-step = make
 [submodule "magit"]
 	path = lib/magit
 	url = git@github.com:magit/magit.git
+	recursive-byte-compile = true
 	info-path = Documentation
-[submodule "magit-popup"]
-	path = lib/magit-popup
-	url = git@github.com:magit/magit-popup.git
 [submodule "notmuch"]
 	path = lib/notmuch
 	url = git://notmuchmail.org/git/notmuch
@@ -49,6 +51,13 @@
 [submodule "packed"]
 	path = lib/packed
 	url = git@github.com:emacscollective/packed.git
+[submodule "transient"]
+	path = lib/transient
+	url = git@github.com:magit/transient.git
+	info-path = docs
+[submodule "treepy"]
+	path = lib/treepy
+	url = git@github.com:volrath/treepy.el.git
 [submodule "use-package"]
 	path = lib/use-package
 	url = git@github.com:jwiegley/use-package.git
