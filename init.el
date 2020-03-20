@@ -74,6 +74,14 @@
   (global-diff-hl-mode)
   (add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh t))
 
+(use-package diff-mode
+  :defer t
+  :config
+  (when (>= emacs-major-version 27)
+    (set-face-attribute 'diff-refine-changed nil :extend t)
+    (set-face-attribute 'diff-refine-removed nil :extend t)
+    (set-face-attribute 'diff-refine-added   nil :extend t)))
+
 (use-package dired
   :defer t
   :config (setq dired-listing-switches "-alh"))
