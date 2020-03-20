@@ -41,7 +41,7 @@
 	info-path = Documentation
 [submodule "notmuch"]
 	path = lib/notmuch
-	url = git://notmuchmail.org/git/notmuch
+	url = https://git.notmuchmail.org/git/notmuch
 	load-path = emacs
 	build-step = ./configure
 	build-step = make
