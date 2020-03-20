@@ -9,8 +9,10 @@
   (setq user-init-file (or load-file-name buffer-file-name))
   (setq user-emacs-directory (file-name-directory user-init-file))
   (message "Loading %s..." user-init-file)
-  (setq package-enable-at-startup nil)
-  ;; (package-initialize)
+  (when (< emacs-major-version 27)
+    (setq package-enable-at-startup nil)
+    ;; (package-initialize)
+    (load-file (expand-file-name "early-init.el" user-emacs-directory)))
   (setq inhibit-startup-buffer-menu t)
   (setq inhibit-startup-screen t)
   (setq inhibit-startup-echo-area-message "locutus")
@@ -72,6 +74,14 @@
   (global-diff-hl-mode)
   (add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh t))
 
+(use-package diff-mode
+  :defer t
+  :config
+  (when (>= emacs-major-version 27)
+    (set-face-attribute 'diff-refine-changed nil :extend t)
+    (set-face-attribute 'diff-refine-removed nil :extend t)
+    (set-face-attribute 'diff-refine-added   nil :extend t)))
+
 (use-package dired
   :defer t
   :config (setq dired-listing-switches "-alh"))
@@ -132,6 +142,14 @@
 (use-package simple
   :config (column-number-mode))
 
+(use-package smerge-mode
+  :defer t
+  :config
+  (when (>= emacs-major-version 27)
+    (set-face-attribute 'smerge-refined-changed nil :extend t)
+    (set-face-attribute 'smerge-refined-removed nil :extend t)
+    (set-face-attribute 'smerge-refined-added   nil :extend t)))
+
 (progn ;    `text-mode'
   (add-hook 'text-mode-hook #'indicate-buffer-boundaries-left))
 
@@ -141,7 +159,11 @@
   (add-to-list 'tramp-default-proxies-alist '(nil "\\`root\\'" "/ssh:%h:"))
   (add-to-list 'tramp-default-proxies-alist '("localhost" nil nil))
   (add-to-list 'tramp-default-proxies-alist
-               (list (regexp-quote (system-name)) nil nil)))
+               (list (regexp-quote (system-name)) nil nil))
+  (setq vc-ignore-dir-regexp
+        (format "\\(%s\\)\\|\\(%s\\)"
+                vc-ignore-dir-regexp
+                tramp-file-name-regexp)))
 
 (progn ;     startup
   (message "Loading %s...done (%.3fs)" user-init-file
