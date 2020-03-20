@@ -100,7 +100,7 @@
 	url = git@github.com:volrath/treepy.el.git
 [submodule "undo-tree"]
 	path = lib/undo-tree
-	url = git@github.com:emacsorphanage/undo-tree.git
+	url = http://www.dr-qubit.org/git/undo-tree.git
 [submodule "use-package"]
 	path = lib/use-package
 	url = git@github.com:jwiegley/use-package.git
