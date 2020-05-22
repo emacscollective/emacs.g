@@ -18,7 +18,6 @@
   (setq inhibit-startup-echo-area-message "locutus")
   (setq initial-buffer-choice t)
   (setq initial-scratch-message "")
-  (setq load-prefer-newer t)
   (scroll-bar-mode 0)
   (tool-bar-mode 0)
   (menu-bar-mode 0))
@@ -33,10 +32,7 @@
   (setq use-package-verbose t))
 
 (use-package auto-compile
-  :demand t
   :config
-  (auto-compile-on-load-mode)
-  (auto-compile-on-save-mode)
   (setq auto-compile-display-buffer               nil)
   (setq auto-compile-mode-line-counter            t)
   (setq auto-compile-source-recreate-deletes-dest t)
@@ -146,7 +142,6 @@
   :defer t
   :config
   (when (>= emacs-major-version 27)
-    (set-face-attribute 'smerge-refined-changed nil :extend t)
     (set-face-attribute 'smerge-refined-removed nil :extend t)
     (set-face-attribute 'smerge-refined-added   nil :extend t)))
 
