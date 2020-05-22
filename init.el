@@ -18,8 +18,10 @@
   (setq inhibit-startup-echo-area-message "locutus")
   (setq initial-buffer-choice t)
   (setq initial-scratch-message "")
-  (scroll-bar-mode 0)
-  (tool-bar-mode 0)
+  (if (display-graphic-p)
+    (progn
+      (tool-bar-mode 0)
+      (scroll-bar-mode 0)))
   (menu-bar-mode 0))
 
 (progn ;    `borg'
