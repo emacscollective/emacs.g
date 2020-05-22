@@ -1,0 +1,11 @@
+# emacsql
+     INOUT INSENSITIVE INSERT INT INT1 INT2 INT3 INT4 INT8 INTEGER
+# magit
+  (let ((fro (or magit-git-output-coding-system
+        (cons (coding-system-change-eol-conversion fro 'unix)
+      (cons fro to))))
+                 (?c "[c]ommit"  'magit-ediff-show-commit)
+                 (?s "[s]tage"   'magit-ediff-stage)
+     1  Li-Yun Chang
+# treepy
+  (and (mapp node)
