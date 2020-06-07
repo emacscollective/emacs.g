@@ -45,6 +45,7 @@
 	load-path = emacs
 	build-step = ./configure
 	build-step = make
+	build-step = borg-update-autoloads
 [submodule "packed"]
 	path = lib/packed
 	url = git@github.com:emacscollective/packed.git
