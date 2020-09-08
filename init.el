@@ -286,6 +286,10 @@
                 vc-ignore-dir-regexp
                 tramp-file-name-regexp)))
 
+(use-package tramp-sh
+  :defer t
+  :config (cl-pushnew 'tramp-own-remote-path tramp-remote-path))
+
 (use-package undo-tree
   :config
   (global-undo-tree-mode)
