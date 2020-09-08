@@ -162,6 +162,10 @@
                 vc-ignore-dir-regexp
                 tramp-file-name-regexp)))
 
+(use-package tramp-sh
+  :defer t
+  :config (cl-pushnew 'tramp-own-remote-path tramp-remote-path))
+
 (progn ;     startup
   (message "Loading %s...done (%.3fs)" user-init-file
            (float-time (time-subtract (current-time)
