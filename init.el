@@ -57,6 +57,7 @@
     (load custom-file)))
 
 (use-package server
+  :commands (server-running-p)
   :config (or (server-running-p) (server-mode)))
 
 (progn ;     startup
@@ -104,10 +105,11 @@
   (add-hook 'emacs-lisp-mode-hook 'reveal-mode)
   (defun indent-spaces-mode ()
     (setq indent-tabs-mode nil))
-  (add-hook 'lisp-interaction-mode-hook #'indent-spaces-mode))
+  (add-hook 'lisp-interaction-mode-hook 'indent-spaces-mode))
 
 (use-package magit
   :defer t
+  :commands (magit-add-section-hook)
   :config
   (magit-add-section-hook 'magit-status-sections-hook
                           'magit-insert-modules
@@ -125,7 +127,7 @@
   :config (global-prettify-symbols-mode)
   (defun indicate-buffer-boundaries-left ()
     (setq indicate-buffer-boundaries 'left))
-  (add-hook 'prog-mode-hook #'indicate-buffer-boundaries-left))
+  (add-hook 'prog-mode-hook 'indicate-buffer-boundaries-left))
 
 (use-package recentf
   :demand t
@@ -149,7 +151,7 @@
     (set-face-attribute 'smerge-refined-added   nil :extend t)))
 
 (progn ;    `text-mode'
-  (add-hook 'text-mode-hook #'indicate-buffer-boundaries-left))
+  (add-hook 'text-mode-hook 'indicate-buffer-boundaries-left))
 
 (use-package tramp
   :defer t
