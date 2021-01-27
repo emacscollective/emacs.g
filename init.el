@@ -24,9 +24,9 @@
     (tool-bar-mode 0))
   (menu-bar-mode 0))
 
-(progn ;    `borg'
+(eval-and-compile ; `borg'
   (add-to-list 'load-path (expand-file-name "lib/borg" user-emacs-directory))
-  (require  'borg)
+  (require 'borg)
   (borg-initialize))
 
 (progn ;    `use-package'
