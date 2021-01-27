@@ -64,7 +64,7 @@
 ;;; Long tail
 
 (use-package dash
-  :config (dash-enable-font-lock))
+  :config (global-dash-fontify-mode 1))
 
 (use-package diff-hl
   :config
