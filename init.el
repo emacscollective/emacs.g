@@ -24,14 +24,17 @@
     (tool-bar-mode 0))
   (menu-bar-mode 0))
 
-(progn ;    `borg'
+(eval-and-compile ; `borg'
   (add-to-list 'load-path (expand-file-name "lib/borg" user-emacs-directory))
-  (require  'borg)
+  (require 'borg)
   (borg-initialize))
 
 (progn ;    `use-package'
   (require  'use-package)
   (setq use-package-verbose t))
+
+(use-package dash)
+(use-package eieio)
 
 (use-package auto-compile
   :config
@@ -54,6 +57,7 @@
     (load custom-file)))
 
 (use-package server
+  :commands (server-running-p)
   :config (or (server-running-p) (server-mode)))
 
 (progn ;     startup
@@ -69,7 +73,7 @@
   (add-hook 'before-save-hook 'copyright-update))
 
 (use-package dash
-  :config (dash-enable-font-lock))
+  :config (global-dash-fontify-mode 1))
 
 (use-package diff-hl
   :config
@@ -106,12 +110,11 @@
   (add-hook 'emacs-lisp-mode-hook 'reveal-mode)
   (defun indent-spaces-mode ()
     (setq indent-tabs-mode nil))
-  (add-hook 'lisp-interaction-mode-hook #'indent-spaces-mode))
+  (add-hook 'lisp-interaction-mode-hook 'indent-spaces-mode))
 
 (use-package magit
   :defer t
-  :bind (("C-x g"   . magit-status)
-         ("C-x M-g" . magit-dispatch))
+  :commands (magit-add-section-hook)
   :config
   (magit-add-section-hook 'magit-status-sections-hook
                           'magit-insert-modules
@@ -129,7 +132,7 @@
   :config (global-prettify-symbols-mode)
   (defun indicate-buffer-boundaries-left ()
     (setq indicate-buffer-boundaries 'left))
-  (add-hook 'prog-mode-hook #'indicate-buffer-boundaries-left))
+  (add-hook 'prog-mode-hook 'indicate-buffer-boundaries-left))
 
 (use-package recentf
   :demand t
@@ -153,7 +156,7 @@
     (set-face-attribute 'smerge-refined-added   nil :extend t)))
 
 (progn ;    `text-mode'
-  (add-hook 'text-mode-hook #'indicate-buffer-boundaries-left))
+  (add-hook 'text-mode-hook 'indicate-buffer-boundaries-left))
 
 (use-package tramp
   :defer t
