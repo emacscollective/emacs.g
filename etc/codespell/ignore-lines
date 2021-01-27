@@ -1,5 +1,28 @@
+# avy
+    (let (visibles beg)
+            (push (cons beg (point)) visibles)
+          (nreverse visibles))))))
+    "wed" "wet" "who" "why" "wig" "win" "wit" "woe" "won" "wry" "you" "zap"
+# edit-indirect
+and the edit-indirect buffer major mode will not be able to tread
 # emacsql
      INOUT INSENSITIVE INSERT INT INT1 INT2 INT3 INT4 INT8 INTEGER
+# flx
+          "ba"
+        "vendor/gems/discourse_emoji/vendor/assets/images/emoji/womans_clothes.png"
+        "vendor/gems/discourse_emoji/vendor/assets/images/emoji/womans_hat.png"
+        "vendor/gems/discourse_emoji/vendor/assets/images/emoji/womens.png"
+# flycheck
+                 (const :tag "Synopsys standard" "synopsys")
+# geiser
+        (debug-log (file-open "geiser.log" (+ open/wronly open/append open/text open/creat)))
+library implementing that API, together with some wee shims in Elisp
+can do for us, besides jumping to and fro.
+# hl-todo
+    ("DONT" . "#5f7f5f")
+# lsp-mode
+         (message-in "Content-Length: 1152\r\n\r\n{\"jsonrpc\":\"2.0\",\"method\":\"sts/highlight\",\"params\":{\"doc\":{\"version\":0,\"uri\":\"file:///home/kyoncho/Public/Desktop/hellow/hello-world/src/main/java/com/example/helloworld/HelloWorldController.java\"},\"codeLenses\":[{\"range\":{\"start\":{\"line\":9,\"character\":0},\"end\":{\"line\":9,\"character\":11}},\"command\":{\"title\":\"← SampleBean\",\"command\":\"sts.showHoverAtPosition\",\"arguments\":[{\"line\":9,\"character\":0}]},\"data\":\"← SampleBean\"},{\"range\":{\"start\":{\"line\":14,\"character\":4},\"end\":{\"line\":14,\"character\":14}},\"command\":{\"title\":\"← SampleBean\",\"command\":\"sts.showHoverAtPosition\",\"arguments\":[{\"line\":14,\"character\":4}]},\"data\":\"← SampleBean\"},{\"range\":{\"start\":{\"line\":17,\"character\":4},\"end\":{\"line\":17,\"character\":31}},\"command\":{\"title\":\"http://127.0.0.1:8080/hello-world\",\"command\":\"sts.open.url\",\"arguments\":[\"http://127.0.0.1:8080/hello-world\"]},\"data\":\"http://127.0.0.1:8080/hello-world\"},{\"range\":{\"start\":{\"line\":25,\"character\":4},\"end\":{\"line\":25,\"character\":32}},\"command\":{\"title\":\"http://127.0.0.1:8080/hello-world2\",\"command\":\"sts.open.url\",\"arguments\":[\"http://127.0.0.1:8080/hello-world2\"]},\"data\":\"http://127.0.0.1:8080/hello-world2\"}]}}")
+    (should (equal messages '("{\"jsonrpc\":\"2.0\",\"method\":\"sts/highlight\",\"params\":{\"doc\":{\"version\":0,\"uri\":\"file:///home/kyoncho/Public/Desktop/hellow/hello-world/src/main/java/com/example/helloworld/HelloWorldController.java\"},\"codeLenses\":[{\"range\":{\"start\":{\"line\":9,\"character\":0},\"end\":{\"line\":9,\"character\":11}},\"command\":{\"title\":\"← SampleBean\",\"command\":\"sts.showHoverAtPosition\",\"arguments\":[{\"line\":9,\"character\":0}]},\"data\":\"← SampleBean\"},{\"range\":{\"start\":{\"line\":14,\"character\":4},\"end\":{\"line\":14,\"character\":14}},\"command\":{\"title\":\"← SampleBean\",\"command\":\"sts.showHoverAtPosition\",\"arguments\":[{\"line\":14,\"character\":4}]},\"data\":\"← SampleBean\"},{\"range\":{\"start\":{\"line\":17,\"character\":4},\"end\":{\"line\":17,\"character\":31}},\"command\":{\"title\":\"http://127.0.0.1:8080/hello-world\",\"command\":\"sts.open.url\",\"arguments\":[\"http://127.0.0.1:8080/hello-world\"]},\"data\":\"http://127.0.0.1:8080/hello-world\"},{\"range\":{\"start\":{\"line\":25,\"character\":4},\"end\":{\"line\":25,\"character\":32}},\"command\":{\"title\":\"http://127.0.0.1:8080/hello-world2\",\"command\":\"sts.open.url\",\"arguments\":[\"http://127.0.0.1:8080/hello-world2\"]},\"data\":\"http://127.0.0.1:8080/hello-world2\"}]}}")))))
 # magit
   (let ((fro (or magit-git-output-coding-system
         (cons (coding-system-change-eol-conversion fro 'unix)
@@ -7,5 +30,94 @@
                  (?c "[c]ommit"  'magit-ediff-show-commit)
                  (?s "[s]tage"   'magit-ediff-stage)
      1  Li-Yun Chang
+# markdown-mode
+    "Rouge" "Ruby" "Rust" "SAS" "SCSS" "SMT" "SPARQL" "SQF" "SQL" "SQLPL"
+    "YAML" "YANG" "Yacc" "Zephir" "Zimpl" "desktop" "eC" "edn" "fish"
+# mu4e
+	gchar *attachs;
+	if ((attachs = get_attach_str (msg, opts))) {
+		print_field ("Attachments", attachs, color);
+		g_free (attachs);
+        "\t* enter a [s]earch query\n" 'mu4e-search)
+	fd = creat (noindexpath, 0644);
+	* enter a [s]earch query
+   • enter a [s]earch query: after pressing <s>, mu4e asks you for a
+	t	\fBt\fRo: recipient
+#   to the SCANNERFLAGS variable for each GIR target in the code base.  If
+#   for each GIR target in the code base.
+@item @t{enter a [s]earch query}: after pressing @key{s}, @t{mu4e} asks
+                            '((:maildir "ther"  :key ?o))))
+            (mu4e~main-action-str "[s]earch " 'mu4e-search)
+# notmuch
+-  Wee[kday]
+  ;; the way that scroll-up signals end-of-buffer, but c'est la vie.
+    query_get_s{ort,tring}
+  * Include alot to the list of recommended interfaces, thanks to
+ elpa-notmuch | notmuch-vim | notmuch-mutt | alot,
+  thread:0000000000063c00 Today [1/1] A Thurd; Bites, stings, sad feelings (bad-news unread)
+  "\\b\\(attache\?ment\\|attached\\|attach\\|pi[èe]ce\s+jointe?\\)\\b"
+    "\tThe \"notmuch new\" command will notice flag changes in filenames\n"
+    "\t\tthe version of gpg to use.\n"
+            args=['notmuch', 'search', '--output=files', 'id:{0}'.format(id)],
+# org
+     ("ca" :default "Autor")
+     ("cs" :default "Autor")
+     ("de" :default "Autor")
+     ("es" :default "Autor")
+     ("et" :default "Autor")
+     ("pl" :default "Autor")
+     ("pt_BR" :default "Autor")
+     ("ro" :default "Autor")
+     ("sl" :default "Seznam tabel")
+     ("et" :default "Tabel")
+     ("ro" :default "Tabel")
+     ("da" :default "Tabel %d")
+     ("et" :default "Tabel %d")
+     ("ro" :default "Tabel %d")
+     ("ro" :default "Creat")
+     ("Uuml" "\\\"{U}" nil "&Uuml;" "Ue" "Ü" "Ü")
+     ("uuml" "\\\"{u}" nil "&uuml;" "ue" "ü" "ü")
+     ("ang" "\\angle" t "&ang;" "[angle]" "[angle]" "∠")
+     ("angle" "\\angle" t "&ang;" "[angle]" "[angle]" "∠")
+     ("pl" :html "Spis tree&#x015b;ci")
+Dieses Werk bzw. Inhalt steht unter einer [[" org-license-cc-url "][Lizenz Creative Commons Namensnennung 3.0 Deutschland]]\n")))
+Dieses Werk bzw. Inhalt steht unter einer [[" org-license-cc-url "][Namensnennung - Weitergabe unter gleichen Bedingungen 3.0 Deutschland]]\n")))
+Dieses Werk bzw. Inhalt steht unter einer [[" org-license-cc-url "][Namensnennung-Keine Bearbeitung 3.0 Deutschland]]\n")))
+Dieses Werk bzw. Inhalt steht unter einer [[" org-license-cc-url "][Namensnennung-Nicht-kommerziell 3.0 Deutschland]]\n")))
+Dieses Werk bzw. Inhalt steht unter einer [[" org-license-cc-url "][Namensnennung - Weitergabe unter gleichen Bedingungen 3.0 Deutschland]]\n")))
+Dieses Werk bzw. Inhalt steht unter einer [[" org-license-cc-url "][Namensnennung-NichtKommerziell-KeineBearbeitung 3.0 Deutschland]]\n")))
+Finally, just to whet your appetite for what can be done with the
+   Finally, just to whet your appetite for what can be done with the
+\key{show subtree in indirect buffer, ded.\ frame}{C-c C-x b}
+  \def\adn#1{\addtokens{\toksC}{#1}\global\countA=1\let\next=\maketoks}
+N          is the number of WHATs to shift.
+      "alpha-numeric" | "integer" | "double"
+common-dur-timing-attlist = attribute smil:dur { \string }?
+    [[http://www.mathomatic.org/][mathomatic]] a portable, command-line, educational CAS and calculator
+			froms := strings.ToLower(msg.GetHeader(header))
+			//println("  froms: ["+froms+"]")
+			for _, from := range strings.Split(froms, ",") {
+  (interactive "nNumber of clones to produce: ")
+  (interactive "nNumber of pre-filled fields: ")
+    ;; Case 1: table.el doesn't support export to OD format.  Strip
+  ;; Further effect is achieved by fixing the OD styles as below:
+- =imenu.el= by Ake Stenhoff and Lars Lindberg ::
+(defun org-babel-perl--var-to-perl (var &optional varn)
+  (if varn
+	(concat "my $" (symbol-name varn) "=" (when lvar "\n")
+	      (if org-agenda-entry-text-mode " ETxt"   "")
+  \gdef^^ba{\ordm}
+  \gdef^^ba{\cedilla s}
+# pdf-tools
+    ;; Stelle global setzen oder nur irgendwo auf den
+# s
+(s-shared-start "bar" "baz") ;; => "ba"
+(s-reverse "ab xyz") ;; => "zyx ba"
+(s-truncate 6 "This is too long") ;; => "Thi..."
+    (s-truncate 6 "This is too long") => "Thi..."
 # treepy
   (and (mapp node)
+# which-key
+        (bloc? (which-key--local-binding-p bcons)))
+    (if (not (eq aloc? bloc?))
+        (and aloc? (not bloc?))
