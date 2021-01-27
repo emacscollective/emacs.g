@@ -24,14 +24,17 @@
     (tool-bar-mode 0))
   (menu-bar-mode 0))
 
-(progn ;    `borg'
+(eval-and-compile ; `borg'
   (add-to-list 'load-path (expand-file-name "lib/borg" user-emacs-directory))
-  (require  'borg)
+  (require 'borg)
   (borg-initialize))
 
 (progn ;    `use-package'
   (require  'use-package)
   (setq use-package-verbose t))
+
+(use-package dash)
+(use-package eieio)
 
 (use-package auto-compile
   :config
@@ -54,6 +57,7 @@
     (load custom-file)))
 
 (use-package server
+  :commands (server-running-p)
   :config (or (server-running-p) (server-mode)))
 
 (progn ;     startup
@@ -68,7 +72,7 @@
   (setq auto-revert-verbose nil))
 
 (use-package dash
-  :config (dash-enable-font-lock))
+  :config (global-dash-fontify-mode 1))
 
 (use-package diff-hl
   :config
@@ -129,20 +133,16 @@
   (add-hook 'emacs-lisp-mode-hook 'reveal-mode)
   (defun indent-spaces-mode ()
     (setq indent-tabs-mode nil))
-  (add-hook 'lisp-interaction-mode-hook #'indent-spaces-mode))
+  (add-hook 'lisp-interaction-mode-hook 'indent-spaces-mode))
 
 (use-package magit
   :defer t
-  :functions (magit-add-section-hook)
+  :commands (magit-add-section-hook)
   :init
   ;;
   ;; Margin settings
   (setq magit-log-margin '(nil age magit-log-margin-width nil 15))
   (setq magit-refs-margin-for-tags t)
-  ;;
-  ;; Key bindings
-  :bind (("C-x g"   . magit-status)
-         ("C-x M-g" . magit-dispatch))
   :config
   (define-key magit-file-mode-map (kbd "C-c g") 'magit-file-dispatch)
   ;;
@@ -215,7 +215,7 @@
   :config (global-prettify-symbols-mode)
   (defun indicate-buffer-boundaries-left ()
     (setq indicate-buffer-boundaries 'left))
-  (add-hook 'prog-mode-hook #'indicate-buffer-boundaries-left))
+  (add-hook 'prog-mode-hook 'indicate-buffer-boundaries-left))
 
 (use-package recentf
   :demand t
@@ -252,7 +252,7 @@
   (add-hook 'term-exec-hook 'with-editor-export-editor))
 
 (progn ;    `text-mode'
-  (add-hook 'text-mode-hook #'indicate-buffer-boundaries-left))
+  (add-hook 'text-mode-hook 'indicate-buffer-boundaries-left))
 
 (use-package tramp
   :defer t
