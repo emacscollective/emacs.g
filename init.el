@@ -33,6 +33,9 @@
   (require  'use-package)
   (setq use-package-verbose t))
 
+(use-package dash)
+(use-package eieio)
+
 (use-package auto-compile
   :config
   (setq auto-compile-display-buffer               nil)
