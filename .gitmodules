@@ -41,6 +41,9 @@
 [submodule "packed"]
 	path = lib/packed
 	url = git@github.com:emacscollective/packed.git
+[submodule "queue"]
+	path = lib/queue
+	url = git@github.com:emacsmirror/queue.git
 [submodule "transient"]
 	path = lib/transient
 	url = git@github.com:magit/transient.git
