@@ -88,6 +88,9 @@
 [submodule "paren-face"]
 	path = lib/paren-face
 	url = git@github.com:tarsius/paren-face.git
+[submodule "queue"]
+	path = lib/queue
+	url = git@github.com:emacsmirror/queue.git
 [submodule "rainbow-mode"]
 	path = lib/rainbow-mode
 	url = git@github.com:emacsmirror/rainbow-mode.git
