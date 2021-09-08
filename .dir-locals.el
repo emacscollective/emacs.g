@@ -2,4 +2,4 @@
   (git-commit-major-mode . git-commit-elisp-text-mode))
  ("lib/undo-tree"
   (emacs-lisp-mode
-   (outline-regexp . ";;;+ [^=]"))))
+   (outline-regexp . ";;;\\(;* [^=\t\n]\\|###autoload\\)\\|("))))
