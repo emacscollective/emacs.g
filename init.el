@@ -168,10 +168,6 @@
   (add-to-list 'magit-repository-directories (cons "~/.emacs.d/" 0))
   (add-to-list 'magit-repository-directories (cons "~/.emacs.d/lib/" 1))
   ;;
-  ;; Commit settings
-  (setq magit-commit-extend-override-date nil)
-  (setq magit-commit-reword-override-date nil)
-  ;;
   ;; Branch settings
   (setq magit-branch-adjust-remote-upstream-alist
         '(("main"   . ("main" "master" "next" "maint"))
