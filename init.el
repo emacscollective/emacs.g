@@ -138,15 +138,18 @@
 (use-package magit
   :defer t
   :commands (magit-add-section-hook)
-  :init
+  ;;
+  ;; Key bindings
+  :bind (("C-c g" . magit-dispatch)
+         ("C-c f" . magit-file-dispatch))
   ;;
   ;; Margin settings
+  :init
   (setq magit-log-margin '(nil age magit-log-margin-width nil 15))
   (setq magit-refs-margin-for-tags t)
-  :config
-  (define-key magit-file-mode-map (kbd "C-c g") 'magit-file-dispatch)
   ;;
   ;; Disable safety nets
+  :config
   (setq magit-commit-squash-confirm nil)
   (setq magit-save-repository-buffers 'dontask)
   (setf (nth 2 (assq 'magit-stash-pop  magit-dwim-selection)) t)
