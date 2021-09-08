@@ -295,6 +295,8 @@
   (global-undo-tree-mode)
   (setq undo-tree-mode-lighter ""))
 
+;;; Tequila worms
+
 (progn ;     startup
   (message "Loading %s...done (%.3fs)" user-init-file
            (float-time (time-subtract (current-time)
