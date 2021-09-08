@@ -149,15 +149,18 @@
 (use-package magit
   :defer t
   :commands (magit-add-section-hook)
-  :init
+  ;;
+  ;; Key bindings
+  :bind (("C-c g" . magit-dispatch)
+         ("C-c f" . magit-file-dispatch))
   ;;
   ;; Margin settings
+  :init
   (setq magit-log-margin '(nil age magit-log-margin-width nil 15))
   (setq magit-refs-margin-for-tags t)
-  :config
-  (define-key magit-file-mode-map (kbd "C-c g") 'magit-file-dispatch)
   ;;
   ;; Disable safety nets
+  :config
   (setq magit-commit-squash-confirm nil)
   (setq magit-save-repository-buffers 'dontask)
   (setf (nth 2 (assq 'magit-stash-pop  magit-dwim-selection)) t)
@@ -179,13 +182,10 @@
   (add-to-list 'magit-repository-directories (cons "~/.emacs.d/" 0))
   (add-to-list 'magit-repository-directories (cons "~/.emacs.d/lib/" 1))
   ;;
-  ;; Commit settings
-  (setq magit-commit-extend-override-date nil)
-  (setq magit-commit-reword-override-date nil)
-  ;;
   ;; Branch settings
   (setq magit-branch-adjust-remote-upstream-alist
-        '(("master" "master" "next" "maint")))
+        '(("main"   . ("main" "master" "next" "maint"))
+          ("master" . ("main" "master" "next" "maint"))))
   ;;
   ;; Push settings
   (setq magit-push-current-set-remote-if-missing 'default)
