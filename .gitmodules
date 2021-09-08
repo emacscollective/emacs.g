@@ -46,8 +46,11 @@
 	url = git@github.com:magit/libegit2.git
 	build-step = make
 [submodule "macrostep"]
+	# pending https://github.com/joddie/macrostep/pull/24
+	#     and https://github.com/joddie/macrostep/pull/26
+	remote = stale git@github.com:joddie/macrostep.git
 	path = lib/macrostep
-	url = git@github.com:joddie/macrostep.git
+	url = git@github.com:tarsiiformes/macrostep.git
 [submodule "magit"]
 	path = lib/magit
 	url = git@github.com:magit/magit.git
