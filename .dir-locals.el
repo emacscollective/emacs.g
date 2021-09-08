@@ -1,3 +1,3 @@
 (("lib/undo-tree"
   (emacs-lisp-mode
-   (outline-regexp . ";;;+ [^=]"))))
+   (outline-regexp . ";;;\\(;* [^=\t\n]\\|###autoload\\)\\|("))))
