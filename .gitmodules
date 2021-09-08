@@ -39,7 +39,6 @@
 	url = https://code.orgmode.org/bzg/org-mode.git
 	build-step = make
 	load-path = lisp
-	load-path = contrib/lisp
 	info-path = doc
 [submodule "packed"]
 	path = lib/packed
