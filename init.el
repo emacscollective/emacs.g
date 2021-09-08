@@ -174,7 +174,8 @@
   ;;
   ;; Branch settings
   (setq magit-branch-adjust-remote-upstream-alist
-        '(("master" "master" "next" "maint")))
+        '(("main"   . ("main" "master" "next" "maint"))
+          ("master" . ("main" "master" "next" "maint"))))
   ;;
   ;; Push settings
   (setq magit-push-current-set-remote-if-missing 'default)
