@@ -13,6 +13,7 @@
 [submodule "dash"]
 	path = lib/dash
 	url = git@github.com:magnars/dash.el.git
+	no-byte-compile = dash-functional.el
 	no-makeinfo = dash-template.texi
 [submodule "diff-hl"]
 	path = lib/diff-hl
@@ -30,6 +31,7 @@
 [submodule "magit"]
 	path = lib/magit
 	url = git@github.com:magit/magit.git
+	no-byte-compile = lisp/magit-libgit.el
 	recursive-byte-compile = true
 	info-path = Documentation
 [submodule "packed"]
