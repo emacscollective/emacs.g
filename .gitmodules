@@ -11,17 +11,17 @@
 	path = lib/closql
 	url = git@github.com:emacscollective/closql.git
 [submodule "dash"]
-	path = lib/dash
-	url = git@github.com:magnars/dash.el.git
 	no-byte-compile = dash-functional.el
 	no-makeinfo = dash-template.texi
+	path = lib/dash
+	url = git@github.com:magnars/dash.el.git
 [submodule "diff-hl"]
 	path = lib/diff-hl
 	url = git@github.com:dgutov/diff-hl.git
 [submodule "emacsql"]
+	no-byte-compile = emacsql-pg.el
 	path = lib/emacsql
 	url = git@github.com:skeeto/emacsql.git
-	no-byte-compile = emacsql-pg.el
 [submodule "epkg"]
 	path = lib/epkg
 	url = git@github.com:emacscollective/epkg.git
@@ -29,25 +29,22 @@
 	path = lib/git-modes
 	url = git@github.com:magit/git-modes.git
 [submodule "magit"]
+	no-byte-compile = lisp/magit-libgit.el
 	path = lib/magit
 	url = git@github.com:magit/magit.git
-	no-byte-compile = lisp/magit-libgit.el
-	recursive-byte-compile = true
-	info-path = Documentation
 [submodule "notmuch"]
-	path = lib/notmuch
-	url = https://git.notmuchmail.org/git/notmuch
 	load-path = emacs
 	build-step = ./configure
 	build-step = make
 	build-step = borg-update-autoloads
+	path = lib/notmuch
+	url = https://git.notmuchmail.org/git/notmuch
 [submodule "packed"]
 	path = lib/packed
 	url = git@github.com:emacscollective/packed.git
 [submodule "transient"]
 	path = lib/transient
 	url = git@github.com:magit/transient.git
-	info-path = docs
 [submodule "treepy"]
 	path = lib/treepy
 	url = git@github.com:volrath/treepy.el.git
