@@ -33,10 +33,10 @@
 	path = lib/magit
 	url = git@github.com:magit/magit.git
 [submodule "org"]
-	path = lib/org
-	url = https://code.orgmode.org/bzg/org-mode.git
 	build-step = make
 	load-path = lisp
+	path = lib/org
+	url = https://code.orgmode.org/bzg/org-mode.git
 [submodule "packed"]
 	path = lib/packed
 	url = git@github.com:emacscollective/packed.git
