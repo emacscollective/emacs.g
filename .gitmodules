@@ -33,14 +33,12 @@
 	url = git@github.com:magit/magit.git
 	no-byte-compile = lisp/magit-libgit.el
 	recursive-byte-compile = true
-	info-path = Documentation
 [submodule "packed"]
 	path = lib/packed
 	url = git@github.com:emacscollective/packed.git
 [submodule "transient"]
 	path = lib/transient
 	url = git@github.com:magit/transient.git
-	info-path = docs
 [submodule "treepy"]
 	path = lib/treepy
 	url = git@github.com:volrath/treepy.el.git
