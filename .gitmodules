@@ -36,11 +36,11 @@
 	path = lib/packed
 	url = git@github.com:emacscollective/packed.git
 [submodule "pdf-tools"]
-	path = lib/pdf-tools
-	url = git@github.com:politza/pdf-tools.git
 	build-step = make
 	build-step = borg-byte-compile
 	build-step = borg-update-autoloads
+	path = lib/pdf-tools
+	url = git@github.com:politza/pdf-tools.git
 [submodule "tablist"]
 	path = lib/tablist
 	url = git@github.com:politza/tablist.git
