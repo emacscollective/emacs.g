@@ -35,6 +35,7 @@
 	path = lib/git-modes
 	url = git@github.com:magit/git-modes.git
 [submodule "libgit"]
+	build-step = make
 	path = lib/libgit
 	url = git@github.com:magit/libegit2.git
 [submodule "magit"]
