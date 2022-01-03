@@ -11,17 +11,17 @@
 	path = lib/closql
 	url = git@github.com:emacscollective/closql.git
 [submodule "dash"]
-	path = lib/dash
-	url = git@github.com:magnars/dash.el.git
 	no-byte-compile = dash-functional.el
 	no-makeinfo = dash-template.texi
+	path = lib/dash
+	url = git@github.com:magnars/dash.el.git
 [submodule "diff-hl"]
 	path = lib/diff-hl
 	url = git@github.com:dgutov/diff-hl.git
 [submodule "emacsql"]
+	no-byte-compile = emacsql-pg.el
 	path = lib/emacsql
 	url = git@github.com:skeeto/emacsql.git
-	no-byte-compile = emacsql-pg.el
 [submodule "epkg"]
 	path = lib/epkg
 	url = git@github.com:emacscollective/epkg.git
@@ -29,11 +29,9 @@
 	path = lib/git-modes
 	url = git@github.com:magit/git-modes.git
 [submodule "magit"]
+	no-byte-compile = lisp/magit-libgit.el
 	path = lib/magit
 	url = git@github.com:magit/magit.git
-	no-byte-compile = lisp/magit-libgit.el
-	recursive-byte-compile = true
-	info-path = Documentation
 [submodule "org"]
 	path = lib/org
 	url = https://code.orgmode.org/bzg/org-mode.git
@@ -46,7 +44,6 @@
 [submodule "transient"]
 	path = lib/transient
 	url = git@github.com:magit/transient.git
-	info-path = docs
 [submodule "treepy"]
 	path = lib/treepy
 	url = git@github.com:volrath/treepy.el.git
