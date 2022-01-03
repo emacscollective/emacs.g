@@ -32,7 +32,6 @@
 	path = lib/magit
 	url = git@github.com:magit/magit.git
 	no-byte-compile = lisp/magit-libgit.el
-	recursive-byte-compile = true
 [submodule "packed"]
 	path = lib/packed
 	url = git@github.com:emacscollective/packed.git
