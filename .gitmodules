@@ -29,9 +29,9 @@
 	path = lib/git-modes
 	url = git@github.com:magit/git-modes.git
 [submodule "lua-mode"]
+	no-byte-compile = init-tryout.el
 	path = lib/lua-mode
 	url = git@github.com:immerrr/lua-mode.git
-	no-byte-compile = init-tryout.el
 [submodule "magit"]
 	no-byte-compile = lisp/magit-libgit.el
 	path = lib/magit
