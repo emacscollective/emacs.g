@@ -59,6 +59,9 @@
 [submodule "packed"]
 	path = lib/packed
 	url = git@github.com:emacscollective/packed.git
+[submodule "sisyphus"]
+	path = lib/sisyphus
+	url = git@github.com:magit/sisyphus.git
 [submodule "sqlite3"]
 	path = lib/sqlite3
 	url = git@github.com:pekingduck/emacs-sqlite3-api.git

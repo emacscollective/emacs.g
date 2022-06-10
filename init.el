@@ -148,6 +148,10 @@
 (use-package simple
   :config (column-number-mode))
 
+(use-package sisyphus
+  :when (>= emacs-major-version 27)
+  :after magit)
+
 (use-package smerge-mode
   :defer t
   :config
