@@ -1,14 +1,17 @@
 -include lib/borg/borg.mk
 
-help::
-	$(info make codespell-dry   = run codespell, dry run)
-	$(info make codespell-fix   = run codespell, write fixes)
-
 bootstrap-borg:
 	@git submodule--helper clone --name borg --path lib/borg \
 	--url git@github.com:emacscollective/borg.git
 	@cd lib/borg; git symbolic-ref HEAD refs/heads/master
 	@cd lib/borg; git reset --hard HEAD
+
+helpall::
+	$(info Test and fix targets)
+	$(info --------------------)
+	$(info make codespell-dry   = run codespell, dry run)
+	$(info make codespell-fix   = run codespell, write fixes)
+	$(info )
 
 codespell-dry:
 	@cd lib; codespell \
