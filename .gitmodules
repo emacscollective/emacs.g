@@ -18,12 +18,18 @@
 	no-makeinfo = dash-template.texi
 	path = lib/dash
 	url = git@github.com:magnars/dash.el.git
+[submodule "debbugs"]
+	path = lib/debbugs
+	url = git@github.com:emacsmirror/debbugs.git
 [submodule "diff-hl"]
 	path = lib/diff-hl
 	url = git@github.com:dgutov/diff-hl.git
 [submodule "dim-autoload"]
 	path = lib/dim-autoload
 	url = git@github.com:tarsius/dim-autoload.git
+[submodule "elpa-admin"]
+	path = lib/elpa-admin
+	url = tarsius@git.sv.gnu.org:/srv/git/emacs/elpa.git
 [submodule "emacsql"]
 	no-byte-compile = emacsql-pg.el
 	path = lib/emacsql
@@ -105,6 +111,9 @@
 [submodule "rainbow-mode"]
 	path = lib/rainbow-mode
 	url = git@github.com:emacsmirror/rainbow-mode.git
+[submodule "sisyphus"]
+	path = lib/sisyphus
+	url = git@github.com:magit/sisyphus.git
 [submodule "sqlite3"]
 	path = lib/sqlite3
 	url = git@github.com:pekingduck/emacs-sqlite3-api.git
