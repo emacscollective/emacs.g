@@ -29,7 +29,7 @@
   (require 'borg)
   (borg-initialize))
 
-(progn ;    `use-package'
+(eval-and-compile ; `use-package'
   (require  'use-package)
   (setq use-package-verbose t))
 
