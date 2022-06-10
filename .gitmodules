@@ -51,6 +51,7 @@
 	path = lib/queue
 	url = git@github.com:emacsmirror/queue.git
 [submodule "sqlite3"]
+	build-step = make
 	path = lib/sqlite3
 	url = git@github.com:pekingduck/emacs-sqlite3-api.git
 [submodule "transient"]
