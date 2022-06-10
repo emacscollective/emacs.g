@@ -15,9 +15,6 @@
 (with-eval-after-load 'package
   (add-to-list 'package-archives
                (cons "melpa" "https://melpa.org/packages/")
-               t)
-  (add-to-list 'package-archives
-               (cons "org" "https://orgmode.org/elpa/")
                t))
 
 ;; Local Variables:
