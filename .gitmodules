@@ -18,6 +18,9 @@
 	no-makeinfo = dash-template.texi
 	path = lib/dash
 	url = git@github.com:magnars/dash.el.git
+[submodule "debbugs"]
+	path = lib/debbugs
+	url = git@github.com:emacsmirror/debbugs.git
 [submodule "diff-hl"]
 	path = lib/diff-hl
 	url = git@github.com:dgutov/diff-hl.git
