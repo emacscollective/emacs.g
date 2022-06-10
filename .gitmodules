@@ -10,6 +10,9 @@
 [submodule "closql"]
 	path = lib/closql
 	url = git@github.com:emacscollective/closql.git
+[submodule "compat"]
+	path = lib/compat
+	url = https://git.sr.ht/~pkal/compat
 [submodule "dash"]
 	no-byte-compile = dash-functional.el
 	no-makeinfo = dash-template.texi
@@ -22,6 +25,9 @@
 	no-byte-compile = emacsql-pg.el
 	path = lib/emacsql
 	url = git@github.com:skeeto/emacsql.git
+[submodule "emacsql-sqlite-builtin"]
+	path = lib/emacsql-sqlite-builtin
+	url = git@github.com:emacscollective/emacsql-sqlite-builtin.git
 [submodule "epkg"]
 	path = lib/epkg
 	url = git@github.com:emacscollective/epkg.git
@@ -41,6 +47,9 @@
 	build-step = borg-update-autoloads
 	path = lib/pdf-tools
 	url = git@github.com:politza/pdf-tools.git
+[submodule "sqlite3"]
+	path = lib/sqlite3
+	url = git@github.com:pekingduck/emacs-sqlite3-api.git
 [submodule "tablist"]
 	path = lib/tablist
 	url = git@github.com:politza/tablist.git

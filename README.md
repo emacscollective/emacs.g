@@ -37,6 +37,6 @@ do so by forking the upstream repository, which is available from
 You might also want to adjust this description.
 
 [init]:    https://emacsair.me/2016/05/17/assimilate-emacs-packages-as-git-submodules
-[Borg]:    https://gitlab.com/tarsius/borg
+[Borg]:    https://github.com/emacscollective/borg
 [manual]:  https://emacsmirror.net/manual/borg
 [Github]:  https://github.com/emacscollective/emacs.g
