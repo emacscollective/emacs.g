@@ -24,6 +24,9 @@
 [submodule "diff-hl"]
 	path = lib/diff-hl
 	url = git@github.com:dgutov/diff-hl.git
+[submodule "elpa-admin"]
+	path = lib/elpa-admin
+	url = tarsius@git.sv.gnu.org:/srv/git/emacs/elpa.git
 [submodule "emacsql"]
 	no-byte-compile = emacsql-pg.el
 	path = lib/emacsql
