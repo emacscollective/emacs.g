@@ -39,7 +39,8 @@
 	path = lib/magit
 	url = git@github.com:magit/magit.git
 [submodule "org"]
-	build-step = make
+	build-step = touch local.mk
+	build-step = make all
 	load-path = lisp
 	path = lib/org
 	url = https://git.savannah.gnu.org/git/emacs/org-mode.git
