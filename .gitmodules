@@ -81,6 +81,9 @@
 [submodule "orgit"]
 	path = lib/orgit
 	url = git@github.com:magit/orgit.git
+[submodule "orgit-forge"]
+	path = lib/orgit-forge
+	url = git@github.com:magit/orgit-forge.git
 [submodule "orglink"]
 	path = lib/orglink
 	url = git@github.com:tarsius/orglink.git
