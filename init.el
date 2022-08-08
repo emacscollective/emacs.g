@@ -71,7 +71,7 @@
 ;;; Long tail
 
 (use-package dash
-  :config (global-dash-fontify-mode 1))
+  :config (global-dash-fontify-mode))
 
 (use-package diff-hl
   :config
