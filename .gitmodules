@@ -24,7 +24,7 @@
 [submodule "emacsql"]
 	no-byte-compile = emacsql-pg.el
 	path = lib/emacsql
-	url = git@github.com:skeeto/emacsql.git
+	url = git@github.com:magit/emacsql.git
 [submodule "epkg"]
 	path = lib/epkg
 	url = git@github.com:emacscollective/epkg.git
