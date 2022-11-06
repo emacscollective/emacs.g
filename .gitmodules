@@ -13,7 +13,7 @@
 	url = git@github.com:emacscollective/borg.git
 [submodule "closql"]
 	path = lib/closql
-	url = git@github.com:emacscollective/closql.git
+	url = git@github.com:magit/closql.git
 [submodule "compat"]
 	path = lib/compat
 	url = https://git.sr.ht/~pkal/compat
@@ -28,10 +28,7 @@
 [submodule "emacsql"]
 	no-byte-compile = emacsql-pg.el
 	path = lib/emacsql
-	url = git@github.com:skeeto/emacsql.git
-[submodule "emacsql-sqlite-builtin"]
-	path = lib/emacsql-sqlite-builtin
-	url = git@github.com:emacscollective/emacsql-sqlite-builtin.git
+	url = git@github.com:magit/emacsql.git
 [submodule "epkg"]
 	path = lib/epkg
 	url = git@github.com:emacscollective/epkg.git
