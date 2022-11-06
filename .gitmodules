@@ -25,9 +25,6 @@
 	no-byte-compile = emacsql-pg.el
 	path = lib/emacsql
 	url = git@github.com:skeeto/emacsql.git
-[submodule "emacsql-sqlite-builtin"]
-	path = lib/emacsql-sqlite-builtin
-	url = git@github.com:emacscollective/emacsql-sqlite-builtin.git
 [submodule "epkg"]
 	path = lib/epkg
 	url = git@github.com:emacscollective/epkg.git
