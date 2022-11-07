@@ -50,11 +50,8 @@
 	path = lib/hl-todo
 	url = git@github.com:tarsius/hl-todo.git
 [submodule "macrostep"]
-	# pending https://github.com/joddie/macrostep/pull/24
-	#     and https://github.com/joddie/macrostep/pull/26
-	remote = stale git@github.com:joddie/macrostep.git
 	path = lib/macrostep
-	url = git@github.com:tarsiiformes/macrostep.git
+	url = git@github.com:emacsorphanage/macrostep.git
 [submodule "magit"]
 	no-byte-compile = lisp/magit-libgit.el
 	path = lib/magit
