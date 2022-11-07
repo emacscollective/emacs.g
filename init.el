@@ -76,7 +76,7 @@
   (add-hook 'before-save-hook 'copyright-update))
 
 (use-package dash
-  :config (global-dash-fontify-mode 1))
+  :config (global-dash-fontify-mode))
 
 (use-package diff-hl
   :config
@@ -139,7 +139,7 @@
 
 (use-package recentf
   :demand t
-  :config (add-to-list 'recentf-exclude "^/\\(?:ssh\\|su\\|sudo\\)?:"))
+  :config (add-to-list 'recentf-exclude "^/\\(?:ssh\\|su\\|sudo\\)?x?:"))
 
 (use-package savehist
   :config (savehist-mode))
