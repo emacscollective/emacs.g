@@ -49,10 +49,6 @@
 [submodule "hl-todo"]
 	path = lib/hl-todo
 	url = git@github.com:tarsius/hl-todo.git
-[submodule "libgit"]
-	build-step = make
-	path = lib/libgit
-	url = git@github.com:magit/libegit2.git
 [submodule "macrostep"]
 	# pending https://github.com/joddie/macrostep/pull/24
 	#     and https://github.com/joddie/macrostep/pull/26
