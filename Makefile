@@ -10,8 +10,9 @@ help helpall::
 	@printf "\n"
 
 bootstrap-borg:
-	@git submodule--helper clone --name borg --path lib/borg \
-	--url git@github.com:emacscollective/borg.git
+	@mkdir .git/modules
+	@git clone https://github.com/emacscollective/borg lib/borg \
+	--separate-git-dir .git/modules/borg
 	@cd lib/borg; git symbolic-ref HEAD refs/heads/master
 	@cd lib/borg; git reset --hard HEAD
 
