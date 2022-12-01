@@ -50,9 +50,6 @@
 [submodule "package-lint"]
 	path = lib/package-lint
 	url = git@github.com:purcell/package-lint.git
-[submodule "packed"]
-	path = lib/packed
-	url = git@github.com:emacscollective/packed.git
 [submodule "sisyphus"]
 	path = lib/sisyphus
 	url = git@github.com:magit/sisyphus.git
