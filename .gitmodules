@@ -50,9 +50,6 @@
 [submodule "orglink"]
 	path = lib/orglink
 	url = git@github.com:tarsius/orglink.git
-[submodule "packed"]
-	path = lib/packed
-	url = git@github.com:emacscollective/packed.git
 [submodule "paren-face"]
 	path = lib/paren-face
 	url = git@github.com:tarsius/paren-face.git
