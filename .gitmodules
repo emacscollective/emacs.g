@@ -56,9 +56,6 @@
 [submodule "orgit-forge"]
 	path = lib/orgit-forge
 	url = git@github.com:magit/orgit-forge.git
-[submodule "packed"]
-	path = lib/packed
-	url = git@github.com:emacscollective/packed.git
 [submodule "sqlite3"]
 	build-step = make
 	path = lib/sqlite3
