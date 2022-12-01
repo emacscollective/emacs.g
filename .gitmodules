@@ -41,9 +41,6 @@
 [submodule "no-littering"]
 	path = lib/no-littering
 	url = git@github.com:emacscollective/no-littering.git
-[submodule "packed"]
-	path = lib/packed
-	url = git@github.com:emacscollective/packed.git
 [submodule "queue"]
 	path = lib/queue
 	url = git@github.com:emacsmirror/queue.git
