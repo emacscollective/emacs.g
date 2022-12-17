@@ -27,16 +27,16 @@ helpall::
 
 codespell-dry:
 	@cd lib; codespell \
-	  --ignore-words ~/.emacs.d/etc/codespell/ignore-words \
-	  --exclude-file ~/.emacs.d/etc/codespell/ignore-lines \
+	  --ignore-words ../etc/codespell/ignore-words \
+	  --exclude-file ../etc/codespell/ignore-lines \
 	  --skip $(shell sed '/^\s*$$/d;/^\s*#.*$$/d;s/#.*//;s/\s//g' \
-	  ~/.emacs.d/etc/codespell/ignore-files | tr "\\n" ",")
+	  etc/codespell/ignore-files | tr "\\n" ",")
 
 codespell-fix:
 	@cd lib; codespell --write-changes \
-	  --ignore-words ~/.emacs.d/etc/codespell/ignore-words \
-	  --exclude-file ~/.emacs.d/etc/codespell/ignore-lines \
+	  --ignore-words ../etc/codespell/ignore-words \
+	  --exclude-file ../etc/codespell/ignore-lines \
 	  --skip $(shell sed '/^\s*$$/d;/^\s*#.*$$/d;s/#.*//;s/\s//g' \
-	  ~/.emacs.d/etc/codespell/ignore-files | tr "\\n" ",")
+	  etc/codespell/ignore-files | tr "\\n" ",")
 
 endif
