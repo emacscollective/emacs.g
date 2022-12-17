@@ -37,6 +37,9 @@
 [submodule "git-modes"]
 	path = lib/git-modes
 	url = git@github.com:magit/git-modes.git
+[submodule "llama"]
+	path = lib/llama
+	url = https://git.sr.ht/~tarsius/llama
 [submodule "macrostep"]
 	path = lib/macrostep
 	url = git@github.com:emacsorphanage/macrostep.git
