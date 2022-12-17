@@ -49,6 +49,9 @@
 [submodule "hl-todo"]
 	path = lib/hl-todo
 	url = git@github.com:tarsius/hl-todo.git
+[submodule "llama"]
+	path = lib/llama
+	url = https://git.sr.ht/~tarsius/llama
 [submodule "macrostep"]
 	path = lib/macrostep
 	url = git@github.com:emacsorphanage/macrostep.git
