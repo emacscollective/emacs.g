@@ -31,6 +31,9 @@
 [submodule "git-modes"]
 	path = lib/git-modes
 	url = git@github.com:magit/git-modes.git
+[submodule "llama"]
+	path = lib/llama
+	url = https://git.sr.ht/~tarsius/llama
 [submodule "magit"]
 	no-byte-compile = lisp/magit-libgit.el
 	path = lib/magit
