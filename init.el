@@ -33,7 +33,9 @@
   (require  'use-package)
   (setq use-package-verbose t))
 
-(use-package dash)
+(use-package dash
+  :config (global-dash-fontify-mode))
+
 (use-package eieio)
 
 (use-package auto-compile
@@ -73,9 +75,6 @@
 (use-package autorevert
   :config
   (setq auto-revert-verbose nil))
-
-(use-package dash
-  :config (global-dash-fontify-mode))
 
 (use-package diff-hl
   :config
