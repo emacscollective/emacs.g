@@ -1,0 +1,9 @@
+[submodule "dash"]
+	no-byte-compile = dash-functional.el
+	no-makeinfo = dash-template.texi
+[submodule "emacsql"]
+	no-byte-compile = emacsql-pg.el
+[submodule "magit"]
+	no-byte-compile = lisp/magit-libgit.el
+[submodule "sqlite3"]
+	build-step = make
