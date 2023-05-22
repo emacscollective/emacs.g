@@ -114,9 +114,9 @@
 (use-package git-commit
   :defer t
   :config
+  (setq git-commit-usage-message nil)
   (remove-hook 'git-commit-setup-hook 'git-commit-setup-changelog-support)
   (remove-hook 'git-commit-setup-hook 'git-commit-propertize-diff)
-  (remove-hook 'git-commit-setup-hook 'with-editor-usage-message)
   (add-hook 'git-commit-setup-hook 'git-commit-turn-on-flyspell t))
 
 (use-package git-rebase
