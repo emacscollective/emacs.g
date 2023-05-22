@@ -1,6 +1,6 @@
-[borg]
-	pushDefault = locutus
-	collective = emacsg
+[include]
+	path = .gitremotes
+	path = .borgconfig
 [submodule "auto-compile"]
 	path = lib/auto-compile
 	url = git@github.com:emacscollective/auto-compile.git
@@ -14,15 +14,12 @@
 	path = lib/compat
 	url = https://git.sr.ht/~pkal/compat
 [submodule "dash"]
-	no-byte-compile = dash-functional.el
-	no-makeinfo = dash-template.texi
 	path = lib/dash
 	url = git@github.com:magnars/dash.el.git
 [submodule "diff-hl"]
 	path = lib/diff-hl
 	url = git@github.com:dgutov/diff-hl.git
 [submodule "emacsql"]
-	no-byte-compile = emacsql-pg.el
 	path = lib/emacsql
 	url = git@github.com:magit/emacsql.git
 [submodule "epkg"]
@@ -35,7 +32,6 @@
 	path = lib/llama
 	url = https://git.sr.ht/~tarsius/llama
 [submodule "magit"]
-	no-byte-compile = lisp/magit-libgit.el
 	path = lib/magit
 	url = git@github.com:magit/magit.git
 [submodule "markdown-mode"]
@@ -48,7 +44,6 @@
 	path = lib/queue
 	url = git@github.com:emacsmirror/queue.git
 [submodule "sqlite3"]
-	build-step = make
 	path = lib/sqlite3
 	url = git@github.com:pekingduck/emacs-sqlite3-api.git
 [submodule "transient"]
