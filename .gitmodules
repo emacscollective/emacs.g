@@ -12,7 +12,7 @@
 	url = git@github.com:magit/closql.git
 [submodule "compat"]
 	path = lib/compat
-	url = https://git.sr.ht/~pkal/compat
+	url = git@github.com:emacs-compat/compat.git
 [submodule "dash"]
 	path = lib/dash
 	url = git@github.com:magnars/dash.el.git
