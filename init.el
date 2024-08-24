@@ -64,7 +64,7 @@
     (load custom-file)))
 
 (use-package server
-  :commands (server-running-p)
+  :functions (server-running-p)
   :config (or (server-running-p) (server-mode)))
 
 (progn ;     startup
