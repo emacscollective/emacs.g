@@ -30,8 +30,8 @@
   (borg-initialize))
 
 (eval-and-compile ; `use-package'
-  (require  'use-package)
-  (setq use-package-verbose t))
+  (setopt use-package-verbose t)
+  (require 'use-package))
 
 (use-package compat)
 
