@@ -30,7 +30,7 @@
 	url = git@github.com:magit/git-modes.git
 [submodule "llama"]
 	path = lib/llama
-	url = https://git.sr.ht/~tarsius/llama
+	url = https://github.com/tarsius/llama.git
 [submodule "magit"]
 	path = lib/magit
 	url = git@github.com:magit/magit.git
