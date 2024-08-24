@@ -2,12 +2,12 @@
 	no-byte-compile = dash-functional.el
 	no-makeinfo = dash-template.texi
 [submodule "emacsql"]
+	no-byte-compile = emacsql-mysql.el
 	no-byte-compile = emacsql-pg.el
-[submodule "magit"]
-	no-byte-compile = lisp/magit-libgit.el
+	no-byte-compile = emacsql-psql.el
+	no-byte-compile = emacsql-sqlite.el
+	no-byte-compile = emacsql-sqlite-module.el
 [submodule "org"]
 	build-step = touch local.mk
 	build-step = make all
 	load-path = lisp
-[submodule "sqlite3"]
-	build-step = make
