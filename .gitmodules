@@ -27,10 +27,10 @@
 	url = https://github.com/emacscollective/epkg.git
 [submodule "forge"]
 	path = lib/forge
-	url = git@github.com:magit/forge.git
+	url = https://github.com/magit/forge.git
 [submodule "ghub"]
 	path = lib/ghub
-	url = git@github.com:magit/ghub.git
+	url = https://github.com/magit/ghub.git
 [submodule "git-modes"]
 	path = lib/git-modes
 	url = https://github.com/magit/git-modes.git
@@ -42,19 +42,19 @@
 	url = https://github.com/magit/magit.git
 [submodule "magit-imerge"]
 	path = lib/magit-imerge
-	url = git@github.com:magit/magit-imerge.git
+	url = https://github.com/magit/magit-imerge.git
 [submodule "magit-tbdiff"]
 	path = lib/magit-tbdiff
-	url = git@github.com:magit/magit-tbdiff.git
+	url = https://github.com/magit/magit-tbdiff.git
 [submodule "markdown-mode"]
 	path = lib/markdown-mode
-	url = git@github.com:jrblevin/markdown-mode.git
+	url = https://github.com/jrblevin/markdown-mode.git
 [submodule "orgit"]
 	path = lib/orgit
-	url = git@github.com:magit/orgit.git
+	url = https://github.com/magit/orgit.git
 [submodule "orgit-forge"]
 	path = lib/orgit-forge
-	url = git@github.com:magit/orgit-forge.git
+	url = https://github.com/magit/orgit-forge.git
 [submodule "transient"]
 	path = lib/transient
 	url = https://github.com/magit/transient.git
@@ -66,4 +66,4 @@
 	url = https://github.com/magit/with-editor.git
 [submodule "yaml"]
 	path = lib/yaml
-	url = git@github.com:zkry/yaml.el.git
+	url = https://github.com/zkry/yaml.el.git
