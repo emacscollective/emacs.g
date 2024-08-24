@@ -7,7 +7,7 @@
 [submodule "bash-completion"]
 	no-byte-compile = sz-testutils.el
 	path = lib/bash-completion
-	url = git@github.com:szermatt/emacs-bash-completion.git
+	url = https://github.com/szermatt/emacs-bash-completion.git
 [submodule "borg"]
 	path = lib/borg
 	url = https://github.com/emacscollective/borg.git
