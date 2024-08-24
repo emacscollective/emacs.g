@@ -3,5 +3,3 @@
 	no-makeinfo = dash-template.texi
 [submodule "emacsql"]
 	no-byte-compile = emacsql-pg.el
-[submodule "magit"]
-	no-byte-compile = lisp/magit-libgit.el
