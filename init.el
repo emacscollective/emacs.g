@@ -30,6 +30,7 @@
   (borg-initialize))
 
 (eval-and-compile ; `use-package'
+  (setopt use-package-enable-imenu-support t)
   (setopt use-package-verbose t)
   (require 'use-package))
 
