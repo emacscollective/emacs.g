@@ -34,9 +34,6 @@
 [submodule "magit"]
 	path = lib/magit
 	url = git@github.com:magit/magit.git
-[submodule "sqlite3"]
-	path = lib/sqlite3
-	url = git@github.com:pekingduck/emacs-sqlite3-api.git
 [submodule "transient"]
 	path = lib/transient
 	url = git@github.com:magit/transient.git

@@ -5,5 +5,3 @@
 	no-byte-compile = emacsql-pg.el
 [submodule "magit"]
 	no-byte-compile = lisp/magit-libgit.el
-[submodule "sqlite3"]
-	build-step = make
