@@ -159,13 +159,12 @@
 (use-package magit
   :defer t
   :commands (magit-add-section-hook)
+  :init
   ;;
   ;; Key bindings
-  :bind (("C-c g" . magit-dispatch)
-         ("C-c f" . magit-file-dispatch))
+  (setq magit-define-global-key-bindings 'recommended)
   ;;
   ;; Margin settings
-  :init
   (setq magit-log-margin '(nil age magit-log-margin-width nil 15))
   (setq magit-refs-margin-for-tags t)
   ;;
