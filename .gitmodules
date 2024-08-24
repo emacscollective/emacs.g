@@ -24,7 +24,7 @@
 	url = https://github.com/dgutov/diff-hl.git
 [submodule "elpa-admin"]
 	path = lib/elpa-admin
-	url = https://git.sv.gnu.org/r/emacs/elpa.git
+	url = https://git.savannah.gnu.org/git/emacs/elpa.git
 [submodule "emacsql"]
 	path = lib/emacsql
 	url = https://github.com/magit/emacsql.git
