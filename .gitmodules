@@ -24,7 +24,7 @@
 	url = https://github.com/dgutov/diff-hl.git
 [submodule "dim-autoload"]
 	path = lib/dim-autoload
-	url = git@github.com:tarsius/dim-autoload.git
+	url = https://github.com/tarsius/dim-autoload.git
 [submodule "elpa-admin"]
 	path = lib/elpa-admin
 	url = https://git.sv.gnu.org/r/emacs/elpa.git
@@ -45,7 +45,7 @@
 	url = https://github.com/magit/git-modes.git
 [submodule "hl-todo"]
 	path = lib/hl-todo
-	url = git@github.com:tarsius/hl-todo.git
+	url = https://github.com/tarsius/hl-todo.git
 [submodule "llama"]
 	path = lib/llama
 	url = https://github.com/tarsius/llama.git
@@ -66,10 +66,10 @@
 	url = https://github.com/jrblevin/markdown-mode.git
 [submodule "mode-line-debug"]
 	path = lib/mode-line-debug
-	url = git@github.com:tarsius/mode-line-debug.git
+	url = https://github.com/tarsius/mode-line-debug.git
 [submodule "morlock"]
 	path = lib/morlock
-	url = git@github.com:tarsius/morlock.git
+	url = https://github.com/tarsius/morlock.git
 [submodule "no-littering"]
 	path = lib/no-littering
 	url = https://github.com/emacscollective/no-littering.git
@@ -81,7 +81,7 @@
 	url = https://github.com/magit/orgit-forge.git
 [submodule "orglink"]
 	path = lib/orglink
-	url = git@github.com:tarsius/orglink.git
+	url = https://github.com/tarsius/orglink.git
 [submodule "package-build"]
 	path = lib/package-build
 	url = git@github.com:melpa/package-build.git
@@ -90,13 +90,13 @@
 	url = git@github.com:purcell/package-lint.git
 [submodule "paren-face"]
 	path = lib/paren-face
-	url = git@github.com:tarsius/paren-face.git
+	url = https://github.com/tarsius/paren-face.git
 [submodule "queue"]
 	path = lib/queue
 	url = https://github.com/emacsmirror/queue.git
 [submodule "rainbow-mode"]
 	path = lib/rainbow-mode
-	url = git@github.com:emacsmirror/rainbow-mode.git
+	url = https://github.com/emacsmirror/rainbow-mode.git
 [submodule "sisyphus"]
 	path = lib/sisyphus
 	url = git@github.com:magit/sisyphus.git
