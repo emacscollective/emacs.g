@@ -40,9 +40,6 @@
 [submodule "treepy"]
 	path = lib/treepy
 	url = git@github.com:volrath/treepy.el.git
-[submodule "use-package"]
-	path = lib/use-package
-	url = git@github.com:jwiegley/use-package.git
 [submodule "with-editor"]
 	path = lib/with-editor
 	url = git@github.com:magit/with-editor.git
