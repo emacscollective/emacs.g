@@ -36,13 +36,13 @@
 	url = https://github.com/magit/magit.git
 [submodule "markdown-mode"]
 	path = lib/markdown-mode
-	url = git@github.com:jrblevin/markdown-mode.git
+	url = https://github.com/jrblevin/markdown-mode.git
 [submodule "no-littering"]
 	path = lib/no-littering
-	url = git@github.com:emacscollective/no-littering.git
+	url = https://github.com/emacscollective/no-littering.git
 [submodule "queue"]
 	path = lib/queue
-	url = git@github.com:emacsmirror/queue.git
+	url = https://github.com/emacsmirror/queue.git
 [submodule "transient"]
 	path = lib/transient
 	url = https://github.com/magit/transient.git
@@ -52,10 +52,10 @@
 [submodule "undo-tree"]
 	remote = silent http://www.dr-qubit.org/git/undo-tree.git
 	path = lib/undo-tree
-	url = git@github.com:tarsiiformes/undo-tree.git
+	url = https://github.com/tarsiiformes/undo-tree.git
 [submodule "with-editor"]
 	path = lib/with-editor
 	url = https://github.com/magit/with-editor.git
 [submodule "yaml-mode"]
 	path = lib/yaml-mode
-	url = git@github.com:yoshiki/yaml-mode.git
+	url = https://github.com/yoshiki/yaml-mode.git
