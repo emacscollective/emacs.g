@@ -3,53 +3,47 @@
 	path = .borgconfig
 [submodule "auto-compile"]
 	path = lib/auto-compile
-	url = git@github.com:emacscollective/auto-compile.git
+	url = https://github.com/emacscollective/auto-compile.git
 [submodule "bash-completion"]
 	no-byte-compile = sz-testutils.el
 	path = lib/bash-completion
 	url = git@github.com:szermatt/emacs-bash-completion.git
 [submodule "borg"]
 	path = lib/borg
-	url = git@github.com:emacscollective/borg.git
+	url = https://github.com/emacscollective/borg.git
 [submodule "closql"]
 	path = lib/closql
-	url = git@github.com:magit/closql.git
+	url = https://github.com/magit/closql.git
 [submodule "compat"]
 	path = lib/compat
-	url = https://git.sr.ht/~pkal/compat
+	url = https://github.com/emacs-compat/compat.git
 [submodule "dash"]
 	path = lib/dash
-	url = git@github.com:magnars/dash.el.git
+	url = https://github.com/magnars/dash.el.git
 [submodule "diff-hl"]
 	path = lib/diff-hl
-	url = git@github.com:dgutov/diff-hl.git
+	url = https://github.com/dgutov/diff-hl.git
 [submodule "emacsql"]
 	path = lib/emacsql
-	url = git@github.com:magit/emacsql.git
+	url = https://github.com/magit/emacsql.git
 [submodule "epkg"]
 	path = lib/epkg
-	url = git@github.com:emacscollective/epkg.git
+	url = https://github.com/emacscollective/epkg.git
 [submodule "git-modes"]
 	path = lib/git-modes
-	url = git@github.com:magit/git-modes.git
+	url = https://github.com/magit/git-modes.git
 [submodule "llama"]
 	path = lib/llama
-	url = https://git.sr.ht/~tarsius/llama
+	url = https://github.com/tarsius/llama.git
 [submodule "magit"]
 	path = lib/magit
-	url = git@github.com:magit/magit.git
-[submodule "sqlite3"]
-	path = lib/sqlite3
-	url = git@github.com:pekingduck/emacs-sqlite3-api.git
+	url = https://github.com/magit/magit.git
 [submodule "transient"]
 	path = lib/transient
-	url = git@github.com:magit/transient.git
+	url = https://github.com/magit/transient.git
 [submodule "treepy"]
 	path = lib/treepy
-	url = git@github.com:volrath/treepy.el.git
-[submodule "use-package"]
-	path = lib/use-package
-	url = git@github.com:jwiegley/use-package.git
+	url = https://github.com/volrath/treepy.el.git
 [submodule "with-editor"]
 	path = lib/with-editor
-	url = git@github.com:magit/with-editor.git
+	url = https://github.com/magit/with-editor.git
