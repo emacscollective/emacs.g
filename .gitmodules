@@ -18,7 +18,7 @@
 	url = https://github.com/magnars/dash.el.git
 [submodule "debbugs"]
 	path = lib/debbugs
-	url = git@github.com:emacsmirror/debbugs.git
+	url = https://github.com/emacsmirror/debbugs.git
 [submodule "diff-hl"]
 	path = lib/diff-hl
 	url = https://github.com/dgutov/diff-hl.git
@@ -27,7 +27,7 @@
 	url = https://github.com/tarsius/dim-autoload.git
 [submodule "elpa-admin"]
 	path = lib/elpa-admin
-	url = https://git.sv.gnu.org/r/emacs/elpa.git
+	url = https://git.savannah.gnu.org/git/emacs/elpa.git
 [submodule "emacsql"]
 	path = lib/emacsql
 	url = https://github.com/magit/emacsql.git
@@ -51,7 +51,7 @@
 	url = https://github.com/tarsius/llama.git
 [submodule "macrostep"]
 	path = lib/macrostep
-	url = git@github.com:emacsorphanage/macrostep.git
+	url = https://github.com/emacsorphanage/macrostep.git
 [submodule "magit"]
 	path = lib/magit
 	url = https://github.com/magit/magit.git
@@ -84,10 +84,10 @@
 	url = https://github.com/tarsius/orglink.git
 [submodule "package-build"]
 	path = lib/package-build
-	url = git@github.com:melpa/package-build.git
+	url = https://github.com/melpa/package-build.git
 [submodule "package-lint"]
 	path = lib/package-lint
-	url = git@github.com:purcell/package-lint.git
+	url = https://github.com/purcell/package-lint.git
 [submodule "paren-face"]
 	path = lib/paren-face
 	url = https://github.com/tarsius/paren-face.git
@@ -99,7 +99,7 @@
 	url = https://github.com/emacsmirror/rainbow-mode.git
 [submodule "sisyphus"]
 	path = lib/sisyphus
-	url = git@github.com:magit/sisyphus.git
+	url = https://github.com/magit/sisyphus.git
 [submodule "transient"]
 	path = lib/transient
 	url = https://github.com/magit/transient.git
