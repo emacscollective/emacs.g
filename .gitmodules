@@ -33,7 +33,7 @@
 	url = https://github.com/tarsius/llama.git
 [submodule "lua-mode"]
 	path = lib/lua-mode
-	url = git@github.com:immerrr/lua-mode.git
+	url = https://github.com/immerrr/lua-mode.git
 [submodule "magit"]
 	path = lib/magit
 	url = https://github.com/magit/magit.git
