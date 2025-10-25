@@ -45,7 +45,7 @@
 	url = https://github.com/emacscollective/no-littering.git
 [submodule "queue"]
 	path = lib/queue
-	url = https://github.com/emacsmirror/queue.git
+	url = https://git.savannah.gnu.org/git/emacs/elpa.git
 [submodule "transient"]
 	path = lib/transient
 	url = https://github.com/magit/transient.git
@@ -53,7 +53,6 @@
 	path = lib/treepy
 	url = https://github.com/volrath/treepy.el.git
 [submodule "undo-tree"]
-	remote = silent http://www.dr-qubit.org/git/undo-tree.git
 	path = lib/undo-tree
 	url = https://github.com/tarsiiformes/undo-tree.git
 [submodule "with-editor"]
