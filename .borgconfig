@@ -5,5 +5,4 @@
 	no-byte-compile = emacsql-mysql.el
 	no-byte-compile = emacsql-pg.el
 	no-byte-compile = emacsql-psql.el
-	no-byte-compile = emacsql-sqlite.el
 	no-byte-compile = emacsql-sqlite-module.el
