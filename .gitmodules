@@ -99,7 +99,7 @@
 	url = https://git.savannah.gnu.org/git/emacs/elpa.git
 [submodule "rainbow-mode"]
 	path = lib/rainbow-mode
-	url = https://github.com/emacsmirror/rainbow-mode.git
+	url = https://git.savannah.gnu.org/git/emacs/elpa.git
 [submodule "sisyphus"]
 	path = lib/sisyphus
 	url = https://github.com/magit/sisyphus.git
