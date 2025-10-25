@@ -120,6 +120,8 @@
 
 (use-package git-commit
   :defer t
+  :init
+  (setq git-commit-redundant-bindings nil)
   :config
   (setq git-commit-usage-message nil)
   (remove-hook 'git-commit-setup-hook 'git-commit-setup-changelog-support)
