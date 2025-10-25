@@ -75,6 +75,10 @@
 
 ;;; Long tail
 
+(use-package bracket-face
+  :when (>= emacs-major-version 30)
+  :config (bracket-face-mode))
+
 (use-package cond-let
   :config
   (font-lock-add-keywords 'emacs-lisp-mode cond-let-font-lock-keywords t))
@@ -145,7 +149,12 @@
   :config (show-paren-mode))
 
 (use-package paren-face
+  :when (< emacs-major-version 30)
   :config (global-paren-face-mode))
+
+(use-package parenthesis-face
+  :when (>= emacs-major-version 30)
+  :config (parenthesis-face-mode))
 
 (use-package prog-mode
   :config (global-prettify-symbols-mode)
