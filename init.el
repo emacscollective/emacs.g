@@ -158,7 +158,7 @@
   (setq magit-define-global-key-bindings 'recommended)
   ;;
   ;; Margin settings
-  (setq magit-log-margin '(nil age magit-log-margin-width nil 15))
+  (setq magit-log-margin '(t age magit-log-margin-width nil 15))
   (setq magit-refs-margin-for-tags t)
   ;;
   ;; Disable safety nets
