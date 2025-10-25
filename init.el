@@ -139,7 +139,7 @@
   :config (mode-line-debug-mode))
 
 (use-package morlock
-  :config (global-morlock-mode))
+  :config (morlock-mode))
 
 (use-package paren
   :config (show-paren-mode))
