@@ -5,7 +5,6 @@
 	path = lib/auto-compile
 	url = https://github.com/emacscollective/auto-compile.git
 [submodule "bash-completion"]
-	no-byte-compile = sz-testutils.el
 	path = lib/bash-completion
 	url = https://github.com/szermatt/emacs-bash-completion.git
 [submodule "borg"]

@@ -1,3 +1,5 @@
+[submodule "bash-completion"]
+	no-byte-compile = sz-testutils.el
 [submodule "dash"]
 	no-byte-compile = dash-functional.el
 	no-makeinfo = dash-template.texi
