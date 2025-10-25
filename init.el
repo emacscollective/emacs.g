@@ -79,6 +79,10 @@
   :config
   (setq auto-revert-verbose nil))
 
+(use-package cond-let
+  :config
+  (font-lock-add-keywords 'emacs-lisp-mode cond-let-font-lock-keywords t))
+
 (use-package diff-hl
   :config
   (setq diff-hl-draw-borders nil)
