@@ -1,10 +1,5 @@
 ;;; early-init.el --- earliest birds               -*- lexical-binding: t -*-
 
-(when (boundp 'comp-eln-load-path)
-  (setcar comp-eln-load-path
-          (expand-file-name (convert-standard-filename "var/eln-cache/")
-                            user-emacs-directory)))
-
 (setq load-prefer-newer t)
 
 (add-to-list 'load-path
