@@ -155,11 +155,6 @@
   :defer t
   :config (cl-pushnew 'tramp-own-remote-path tramp-remote-path))
 
-(use-package undo-tree
-  :config
-  (global-undo-tree-mode)
-  (setq undo-tree-mode-lighter ""))
-
 ;;; Tequila worms
 
 (borg--load-config (concat (user-real-login-name) ".el"))
