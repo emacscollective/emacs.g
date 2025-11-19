@@ -1,11 +1,11 @@
-;;; early-init.el --- earliest birds               -*- lexical-binding: t -*-
+;;; early-init.el --- Earliest birds               -*- lexical-binding: t -*-
 
 (setq load-prefer-newer t)
 
-(add-to-list 'load-path
-             (expand-file-name
-              "lib/auto-compile"
-              (file-name-directory (or load-file-name buffer-file-name))))
+(add-to-list 'load-path (expand-file-name "lib/borg" user-emacs-directory))
+(require 'borg)
+(borg-initialize)
+
 (require 'auto-compile)
 (auto-compile-on-load-mode)
 (auto-compile-on-save-mode)
