@@ -104,10 +104,7 @@
   :config (global-eldoc-mode))
 
 (use-package forge
-  :after magit
-  :init
-  (setq forge-database-connector
-        (if (>= emacs-major-version 29) 'sqlite-builtin 'sqlite-module)))
+  :after magit)
 
 (use-package git-commit
   :defer t
