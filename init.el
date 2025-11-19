@@ -134,7 +134,7 @@
   :config (column-number-mode))
 
 (use-package sisyphus
-  :when (>= emacs-major-version 27)
+  :when (>= emacs-major-version 30)
   :after magit)
 
 (use-package smerge-mode
