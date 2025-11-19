@@ -30,8 +30,7 @@
   (setq auto-compile-display-buffer               nil)
   (setq auto-compile-mode-line-counter            t)
   (setq auto-compile-source-recreate-deletes-dest t)
-  (setq auto-compile-toggle-deletes-nonlib-dest   t)
-  (setq auto-compile-update-autoloads             t))
+  (setq auto-compile-toggle-deletes-nonlib-dest   t))
 
 (use-package epkg
   :defer t
