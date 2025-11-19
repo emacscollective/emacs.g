@@ -94,9 +94,6 @@
 [submodule "paren-face"]
 	path = lib/paren-face
 	url = https://github.com/tarsius/paren-face.git
-[submodule "queue"]
-	path = lib/queue
-	url = https://git.savannah.gnu.org/git/emacs/elpa.git
 [submodule "rainbow-mode"]
 	path = lib/rainbow-mode
 	url = https://git.savannah.gnu.org/git/emacs/elpa.git
@@ -109,9 +106,6 @@
 [submodule "treepy"]
 	path = lib/treepy
 	url = https://github.com/volrath/treepy.el.git
-[submodule "undo-tree"]
-	path = lib/undo-tree
-	url = https://github.com/tarsiiformes/undo-tree.git
 [submodule "with-editor"]
 	path = lib/with-editor
 	url = https://github.com/magit/with-editor.git
