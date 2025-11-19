@@ -9,10 +9,6 @@
   (setq user-init-file (or load-file-name buffer-file-name))
   (setq user-emacs-directory (file-name-directory user-init-file))
   (message "Loading %s..." user-init-file)
-  (when (< emacs-major-version 27)
-    (setq package-enable-at-startup nil)
-    ;; (package-initialize)
-    (load-file (expand-file-name "early-init.el" user-emacs-directory)))
   (setq inhibit-startup-buffer-menu t)
   (setq inhibit-startup-screen t)
   (setq inhibit-startup-echo-area-message "locutus")
@@ -88,17 +84,15 @@
 (use-package diff-mode
   :defer t
   :config
-  (when (>= emacs-major-version 27)
-    (set-face-attribute 'diff-refine-changed nil :extend t)
-    (set-face-attribute 'diff-refine-removed nil :extend t)
-    (set-face-attribute 'diff-refine-added   nil :extend t)))
+  (set-face-attribute 'diff-refine-changed nil :extend t)
+  (set-face-attribute 'diff-refine-removed nil :extend t)
+  (set-face-attribute 'diff-refine-added   nil :extend t))
 
 (use-package dired
   :defer t
   :config (setq dired-listing-switches "-alh"))
 
 (use-package eldoc
-  :when (version< "25" emacs-version)
   :config (global-eldoc-mode))
 
 (use-package help
@@ -146,7 +140,6 @@
   :config (savehist-mode))
 
 (use-package saveplace
-  :when (version< "25" emacs-version)
   :config (save-place-mode))
 
 (use-package simple
@@ -155,9 +148,8 @@
 (use-package smerge-mode
   :defer t
   :config
-  (when (>= emacs-major-version 27)
-    (set-face-attribute 'smerge-refined-removed nil :extend t)
-    (set-face-attribute 'smerge-refined-added   nil :extend t)))
+  (set-face-attribute 'smerge-refined-removed nil :extend t)
+  (set-face-attribute 'smerge-refined-added   nil :extend t))
 
 (progn ;    `text-mode'
   (add-hook 'text-mode-hook 'indicate-buffer-boundaries-left))
