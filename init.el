@@ -1,4 +1,5 @@
 ;;; init.el --- user-init-file                    -*- lexical-binding: t -*-
+(borg-report-load-duration)
 ;;; Early birds
 (progn ;     startup
   (setq inhibit-startup-buffer-menu t)
@@ -45,7 +46,7 @@
   :config
   (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
   (when (file-exists-p custom-file)
-    (load custom-file)))
+    (load custom-file nil t)))
 
 (use-package server
   :functions (server-running-p)
@@ -53,8 +54,7 @@
 
 (progn ;     startup
   (message "Loading early birds...done (%.3fs)"
-           (float-time (time-subtract (current-time)
-                                      before-user-init-time))))
+           (float-time (time-subtract (current-time) before-init-time))))
 
 ;;; Long tail
 
@@ -159,24 +159,10 @@
 
 ;;; Tequila worms
 
-(progn ;     startup
-  (message "Loading %s...done (%.3fs)" user-init-file
-           (float-time (time-subtract (current-time)
-                                      before-user-init-time)))
-  (add-hook 'after-init-hook
-            (lambda ()
-              (message
-               "Loading %s...done (%.3fs) [after-init]" user-init-file
-               (float-time (time-subtract (current-time)
-                                          before-user-init-time))))
-            t))
+(borg--load-config (concat (user-real-login-name) ".el"))
+(borg-report-after-init-duration)
 
-(progn ;     personalize
-  (let ((file (expand-file-name (concat (user-real-login-name) ".el")
-                                user-emacs-directory)))
-    (when (file-exists-p file)
-      (load file))))
-
+;;; _
 ;; Local Variables:
 ;; indent-tabs-mode: nil
 ;; End:
