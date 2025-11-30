@@ -165,7 +165,7 @@
 ;;; Tequila worms
 
 (borg--load-config (concat (user-real-login-name) ".el"))
-(borg-report-after-init-duration)
+(borg-report-init-duration)
 
 ;;; _
 ;; Local Variables:
