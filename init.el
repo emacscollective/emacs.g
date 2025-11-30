@@ -56,6 +56,7 @@
 
 (use-package bracket-face
   :when (>= emacs-major-version 30)
+  :functions (bracket-face-mode)
   :config (bracket-face-mode))
 
 (use-package cond-let
@@ -127,10 +128,12 @@
 
 (use-package paren-face
   :when (< emacs-major-version 30)
+  :functions (global-paren-face-mode)
   :config (global-paren-face-mode))
 
 (use-package parenthesis-face
   :when (>= emacs-major-version 30)
+  :functions (parenthesis-face-mode)
   :config (parenthesis-face-mode))
 
 (use-package prog-mode
