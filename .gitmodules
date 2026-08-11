@@ -61,6 +61,9 @@
 [submodule "transient"]
 	path = lib/transient
 	url = https://github.com/magit/transient.git
+[submodule "treepy"]
+	path = lib/treepy
+	url = https://github.com/volrath/treepy.el
 [submodule "with-editor"]
 	path = lib/with-editor
 	url = https://github.com/magit/with-editor.git
