@@ -133,6 +133,9 @@
   (setq magit-log-margin '(t age magit-log-margin-width nil 15))
   (setq magit-refs-margin-for-tags t)
   ;;
+  ;; Diff settings (1/2)
+  (setq magit-diff-specify-hunk-foreground nil)
+  ;;
   ;; Disable safety nets
   :config
   (setq magit-commit-squash-confirm nil)
@@ -179,8 +182,10 @@
                           'magit-insert-modules
                           'append)
   ;;
-  ;; Diff buffer settings
+  ;; Diff settings (2/2)
   (setq magit-diff-refine-hunk 'all)
+  (setq magit-diff-fontify-hunk 'all)
+  (setq magit-diff-use-indicator-faces t)
   ;;
   ;; Revision buffer settings
   (setq magit-revision-show-gravatars t))
