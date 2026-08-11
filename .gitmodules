@@ -96,7 +96,7 @@
 	url = https://github.com/tarsius/paren-face.git
 [submodule "rainbow-mode"]
 	path = lib/rainbow-mode
-	url = https://git.savannah.gnu.org/git/emacs/elpa.git
+	url = https://git.savannah.gnu.org/git/elpa/gnu.git
 [submodule "sisyphus"]
 	path = lib/sisyphus
 	url = https://github.com/magit/sisyphus.git
