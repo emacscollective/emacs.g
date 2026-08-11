@@ -48,10 +48,6 @@
   :functions (server-running-p)
   :config (or (server-running-p) (server-mode)))
 
-(progn ;     startup
-  (message "Loading early birds...done (%.3fs)"
-           (float-time (time-subtract (current-time) before-init-time))))
-
 ;;; Long tail
 
 (use-package bracket-face
